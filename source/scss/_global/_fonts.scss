@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype-variations');
+  /* Диапазон насыщенности (от Thin 100 до Black 900) */
+  font-weight: 100 900;
+  /* Диапазон оптического размера (от 14 до 32) */
+  font-optical-sizing: auto;
+  font-style: normal;
+  /* Рекомендуется для шрифтов интерфейса */
+  font-display: swap; 
+}

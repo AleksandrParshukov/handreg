@@ -1,0 +1,25 @@
+.breadcrumbs {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-black);
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  a {
+    color: rgb(40 39 45 / 0.6);
+
+    &:hover,
+    &:focus {
+      color: var(--color-black);
+    }
+
+    &::after {
+      content: '/';
+      margin-inline: 4px;
+    }
+  }
+}
+
+.breadcrumbs-top {
+  padding-top: 44px;
+}

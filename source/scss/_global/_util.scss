@@ -1,0 +1,150 @@
+.wrapper {
+  width: 100%;
+  max-width: 1600px;
+  padding-inline: 60px;
+  margin-inline: auto;
+}
+
+.glow-btn {
+  --radius: 12px;
+  --grad: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  background: var(--grad) repeat-y;
+  border-radius: var(--radius);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 6px 10px -8px 10px;
+    z-index: -1;
+    border-radius: calc(var(--radius) + 6px);
+    background: var(--grad);
+    filter: blur(20px);
+    opacity: 0.6;
+  }
+}
+
+.h1 {
+  font-weight: 500;
+  font-size: clamp(70px, ,85px);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.section {
+  padding-inline: var(--section-inline-padding);
+}
+
+.loader {
+  margin: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 3px solid #000000;
+  border-right-color: transparent;
+  border-radius: 100vw;
+  animation: spin infinite 1s linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: $md) {
+  .to-md {
+    display: none !important;
+  }
+}
+
+@media (max-width: $md) {
+  .from-md {
+    display: none !important;
+  }
+
+  .wrapper {
+    padding-inline: 24px;
+  }
+
+  .h1 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: $ssm) {
+  .to-ssm {
+    display: none !important;
+  }
+}
+
+@media (max-width: $ssm) {
+  .section {
+    padding-block: 80px;
+
+    &--bb {
+      &::after {
+        width: 100vw;
+      }
+    }
+  }
+
+  .slide-btn,
+  .btn-more {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $sm) {
+  .to-sm {
+    display: none !important;
+  }
+}
+
+@media (max-width: $sm) {
+  .from-sm {
+    display: none !important;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+
+  .h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .slide-btn-outline {
+    --icon-height: 32px;
+  }
+}
+
+@media (min-width: $xs) {
+  .to-xs {
+    display: none !important;
+  }
+}
+
+@media (max-width: $xs) {
+  .from-xs {
+    display: none !important;
+  }
+
+  .wrapper {
+    padding-inline: 16px;
+  }
+
+  .badge {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

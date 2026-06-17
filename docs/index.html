@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark-theme">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" href="css/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <title>ХЭНДРЕГ</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="/" class="header__logo">
+        <img src="./img/logo.png" width="137" height="35" alt="">
+      </a>
+
+      <div class="header__menu">
+        <button type="button" class="header__toggle to-ssm js_menu_open">
+          <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.487305 0.4875H23.4873M0.487305 5.82083H23.4873M0.487305 11.4875H23.4873" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <nav class="main-nav">
+          <ul class="main-nav__contacts main-nav__list">
+            <li><a href="tel:+79111781828" class="main-nav__link">+7 (911) 178-18-28</a></li>
+            <li><a href="mailto:viplanding@mail.ru" class="main-nav__link">viplanding@mail.ru</a></li>
+          </ul>
+
+          <ul class="main-nav__list">
+            <li><a href="#" class="main-nav__link">Услуги</a></li>
+            <li><a href="#" class="main-nav__link">Портфолио</a></li>
+            <li><a href="#" class="main-nav__link">Студия</a></li>
+            <li><a href="#" class="main-nav__link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__controls">
+          <button class="header__theme dark js_theme_toggle">
+            <i class="fa-regular fa-sun"></i>
+            <i class="fa-regular fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+<section class="banner section">
+  <div class="banner__content">
+    <h1 class="h1">
+      <span class="bannerSlideUp">Веб-студия</span><br>
+      <span class="bannerSlideUp">Маркетинговое агенство</span>
+    </h1>
+
+    <p class="banner__text bannerSlideUp">Интернет-магазины, сайты-каталоги, корпоративные сайты, одностраничные лэндинги и сайты-визитки под ключ</p>
+  </div>
+
+  <div class="banner__bottom">
+    <a href="#" class="banner__callback glow-btn magneticBtn js_cursor_fill">
+      <span>Обсудить проект</span>
+      <span class="btn_hover"></span>
+    </a>
+
+    <div class="banner__contacts">
+      <a href="tel:+79111781828" class="bannerSlideUp">+7 (911) 178-18-28</a>
+      <span>/</span>
+      <a href="mailto:viplanding@mail.ru" class="bannerSlideUp">viplanding@mail.ru</a>
+    </div>
+  </div>
+
+    <img src="./img/banner-bg.png" alt="" class="banner__img" id="sourceImage" />
+</section>
+
+<div class="slides-wrapper">
+  
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="wrapper">
+    <div class="footer__block">
+      <a href="/" class="footer__logo">
+        <img src="img/logo-full.png" width="118" height="90" alt="logo">
+      </a>
+
+      <p class="footer__text">Только лучшее оборудование для&nbsp;ваших кинотеатров</p>
+    </div>
+
+    <nav class="footer__block">
+      <p class="footer__caption">Навигация</p>
+
+      <ul class="footer__list">
+        <li><a href="/" class="footer__link">Главная</a></li>
+        <li><a href="equipment.html" class="footer__link">Оборудование</a></li>
+        <li><a href="design.html" class="footer__link">Проектирование и дизайн</a></li>
+        <li><a href="materials.html" class="footer__link">Материалы</a></li>
+        <li><a href="products.html" class="footer__link">Магазин</a></li>
+        <li><a href="" class="footer__link">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__block">
+      <p class="footer__caption">Соц.сети</p>
+      <a href="#" class="footer__social">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 0C31.3819 0 36.073 4.86486e-05 39.3047 2.47949C40.1367 3.1179 40.8821 3.86333 41.5205 4.69531C44 7.92699 44 12.6181 44 22C44 31.3819 44 36.073 41.5205 39.3047L41.2764 39.6133C40.6948 40.3219 40.0327 40.9619 39.3047 41.5205L38.998 41.7451C35.7759 43.9998 31.0894 44 22 44C12.9106 44 8.22408 43.9998 5.00195 41.7451L4.69531 41.5205C3.86333 40.8821 3.1179 40.1367 2.47949 39.3047C4.86486e-05 36.073 0 31.3819 0 22C0 12.9106 0.000156367 8.22408 2.25488 5.00195L2.47949 4.69531C3.03811 3.9673 3.67806 3.30525 4.38672 2.72363L4.69531 2.47949C7.92699 4.86486e-05 12.6181 0 22 0ZM22 2C17.2623 2 13.8761 2.00345 11.2646 2.29785C8.69371 2.58773 7.1217 3.13826 5.91211 4.06641C5.21889 4.59835 4.59835 5.21889 4.06641 5.91211C3.13826 7.1217 2.58773 8.69371 2.29785 11.2646C2.00345 13.8761 2 17.2623 2 22C2 26.7377 2.00345 30.1239 2.29785 32.7354C2.58773 35.3063 3.13826 36.8783 4.06641 38.0879C4.59835 38.7811 5.21889 39.4016 5.91211 39.9336C7.1217 40.8617 8.69371 41.4123 11.2646 41.7021C13.8761 41.9966 17.2623 42 22 42C26.7377 42 30.1239 41.9966 32.7354 41.7021C35.3063 41.4123 36.8783 40.8617 38.0879 39.9336C38.7811 39.4016 39.4016 38.7811 39.9336 38.0879C40.8617 36.8783 41.4123 35.3063 41.7021 32.7354C41.9966 30.1239 42 26.7377 42 22C42 17.2623 41.9966 13.8761 41.7021 11.2646C41.4123 8.69371 40.8617 7.1217 39.9336 5.91211C39.4016 5.21889 38.7811 4.59835 38.0879 4.06641C36.8783 3.13826 35.3063 2.58773 32.7354 2.29785C30.1239 2.00345 26.7377 2 22 2ZM13.0449 14.667C13.3138 22.676 17.6145 25.0615 19.4961 25.7432V14.667H23.7969V20.8018C27.2372 20.3927 29.4112 16.5416 30.0684 14.667H34.5488C34.0111 18.5863 30.4565 21.597 28.6348 22.5059C31.681 23.4431 35.444 27.9584 35.4443 30.5146H30.7852C29.0649 26.1525 25.4096 24.8344 23.7969 24.7207V30.5146C13.6725 31.1963 8.29677 23.1875 8.56543 14.667H13.0449Z" fill="currentColor" />
+        </svg>
+        <span>Наш VK</span>
+      </a>
+
+      <a href="#" class="footer__policy" data-toggle="modal" data-target="#policyModal">Политика конфиденциальности</a>
+      <a href="https://inetmagazine.ru/" class="footer__develop footer__text">
+        Разработка сайта: Хэндрег
+      </a>
+    </div>
+</footer>
+
+<!-- <div class="cookie js_cookie">
+  <div class="wrapper">
+    <p>
+      Мы используем куки для наилучшего представления нашего сайта. <br>
+      Если Вы продолжите использовать сайт, мы будем считать что Вас это устраивает.
+    </p>
+    <button type="button" class="cookie__btn js_apply_cookie">Хорошо</button>
+    <button type="button" class="cookie__btn" data-toggle="modal" data-target="#policyModal">Политика конфиденциальности</button>
+  </div>
+</div> -->
+
+<div id="callbackModal" class="modal cb-modal fade">
+  <div class="modal__dialog">
+    <div class="modal__content">
+      <div class="modal__body">
+        <button type="button" class="modal__close" data-dismiss="modal">
+          <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 7L24 21M24 7L8 21" stroke="#010101" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <p class="cb-modal__title">Выберите удобный для Вас способ связи</p>
+        <div class="cb-modal__socials">
+          <a href="#" class="cb-modal__link">
+            <svg width="44" height="44" viewBox="-1 -1 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2712 34.3712C19.7937 34.3712 18.6424 34.008 16.6411 32.555C15.3752 34.1896 11.3667 35.4671 11.1918 33.2815C11.1918 31.6409 10.8302 30.2545 10.4203 28.7409C9.93202 26.8762 9.37744 24.7997 9.37744 21.7908C9.37744 14.6046 15.2487 9.19824 22.2049 9.19824C29.1671 9.19824 34.6224 14.8709 34.6224 21.8574C34.6458 28.7358 29.1198 34.3345 22.2712 34.3712ZM22.3737 15.4098C18.986 15.2342 16.3457 17.5892 15.761 21.2823C15.2788 24.3396 16.1348 28.0629 16.8641 28.2566C17.2137 28.3413 18.0938 27.627 18.6424 27.076C19.5494 27.7054 20.6057 28.0833 21.7046 28.1718C25.2148 28.3414 28.2141 25.6575 28.4498 22.1359C28.587 18.6068 25.8843 15.6178 22.3737 15.4158V15.4098Z" fill="currentColor" />
+            </svg>
+            <span>MAX</span>
+          </a>
+          <a href="#" class="cb-modal__link">
+            <svg width="44" height="44" viewBox="-1 -1 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1981 21.7679C16.6918 18.9737 21.0218 17.1315 23.1884 16.2415C29.3744 13.7003 30.6598 13.2589 31.4976 13.2443C31.6819 13.2411 32.0939 13.2862 32.3608 13.5001C32.5861 13.6807 32.6481 13.9246 32.6778 14.0959C32.7075 14.2671 32.7444 14.6571 32.7151 14.9619C32.3798 18.4407 30.9293 26.8826 30.1914 30.7788C29.8792 32.4275 29.2643 32.9802 28.6691 33.0343C27.3756 33.1519 26.3933 32.19 25.1404 31.3789C23.1799 30.1096 22.0724 29.3195 20.1694 28.0809C17.9702 26.6496 19.3958 25.8629 20.6492 24.5772C20.9772 24.2407 26.6766 19.1206 26.7869 18.6562C26.8007 18.5981 26.8135 18.3815 26.6833 18.2672C26.553 18.1529 26.3608 18.192 26.2221 18.2231C26.0254 18.2671 22.8935 20.3117 16.8263 24.3566C15.9374 24.9595 15.1321 25.2533 14.4107 25.2379C13.6154 25.2209 12.0855 24.7937 10.9481 24.4286C9.55317 23.9808 8.44447 23.744 8.54102 22.9834C8.5913 22.5872 9.14368 22.1821 10.1981 21.7679Z" fill="currentColor" />
+            </svg>
+            <span>Telegram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="policyModal" class="modal fade">
+  <div class="modal__dialog">
+    <div class="modal__content">
+      <div class="modal__body">
+        <div class="modal__top">
+          <p class="modal__title">Политика конфиденциальности</p>
+
+          <button type="button" class="modal__close" data-dismiss="modal">
+            <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 7L24 21M24 7L8 21" stroke="#010101" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal__text desc">
+          <p>«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202</p>
+
+          <p>«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202м«Бизнес-центр Каменноостровский-40», Каменноостровский просп., д. 40, 2 этаж, кабинет 202</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="contactFormModal" class="modal cf-modal fade">
+  <div class="modal__dialog">
+    <div class="modal__content">
+      <div class="modal__body">
+        <div class="modal__top">
+          <p class="modal__title">Форма обратной связи</p>
+
+          <button type="button" class="modal__close" data-dismiss="modal">
+            <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 7L24 21M24 7L8 21" stroke="#010101" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label class="contact-form__label" for="name">ФИО *</label>
+            <input class="contact-form__input" type="text" name="name" id="name" placeholder="Иванов Иван Иванович">
+          </div>
+          <div class="form-group">
+            <label class="contact-form__label" for="city">Город *</label>
+            <input class="contact-form__input" type="text" name="city" id="city" placeholder="Москва">
+          </div>
+          <div class="form-group">
+            <label class="contact-form__label" for="email">Email *</label>
+            <input class="contact-form__input" type="email" name="email" id="email" placeholder="example@mail.com">
+          </div>
+          <div class="form-group">
+            <label class="contact-form__label" for="phone">Телефон *</label>
+            <input class="contact-form__input js_phone_input" type="tel" name="phone" id="phone" placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="contact-form__checkbox">
+            <input type="checkbox" name="personal-data" id="personal-data">
+            <label for="personal-data">
+              <span>Согласие на обработку персональных данных</span>
+            </label>
+          </div>
+
+          <button type="submit" class="contact-form__submit btn">
+            <span>Отправить</span>
+            <svg width="45" height="45" viewBox="-1 -1 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="22" fill="var(--icon-bg)" stroke="var(--icon-stroke)" />
+              <path d="M17.5312 13.0625L26.4688 22L17.5312 30.9375" stroke="var(--icon-chevron)" stroke-width="2.0625" stroke-linecap="round" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/animations.js"></script>
+</body>
+
+</html>

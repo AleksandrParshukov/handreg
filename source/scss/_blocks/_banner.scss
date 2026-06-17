@@ -1,0 +1,146 @@
+.banner {
+  height: 100vh;
+  padding-block: 100px 60px;
+  margin-top: calc(-1 * var(--header-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+
+    h1 {
+      margin-top: 60px;
+      max-width: 600px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    max-width: 400px;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+
+  &__grid {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    pointer-events: none;
+  }
+
+  .cell {
+    background: var(--color-primary);
+    transform-origin: 50% 0%;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: clamp(24px, 8vw, 120px);
+    position: relative;
+    z-index: 1;
+  }
+
+  &__callback {
+    --x: 50%;
+    --y: 50%;
+    --radius: 100vw;
+
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    transition: color 0.4s ease;
+
+    span {
+      z-index: 2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: var(--color-text);
+      transform: translate(-50%, -50%) !important;
+      transition:
+        width 0.6s,
+        height 0.6s,
+        background-color 0.4s;
+      top: var(--y);
+      left: var(--x);
+    }
+
+    &:hover {
+      color: var(--color-primary);
+
+      &::after {
+        width: 300%;
+        height: 300%;
+      }
+    }
+  }
+
+  &__contacts {
+    font-weight: 500;
+    font-size: clamp(20px, 2.1vw, 32px);
+    display: flex;
+    gap: 16px;
+
+    a {
+      text-transform: uppercase;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 4px;
+        background: currentColor;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        transform: scaleX(0);
+        transform-origin: right center;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+          transform-origin: left center;
+        }
+      }
+    }
+  }
+}

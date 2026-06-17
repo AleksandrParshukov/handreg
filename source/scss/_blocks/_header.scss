@@ -1,0 +1,58 @@
+.header {
+  --header-gap: clamp(24px, 4vw, 120px);
+  height: var(--header-height);
+  padding-inline: var(--section-inline-padding);
+  background: #{"rgb(from var(--color-primary) r g b / 0.25)"};
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--header-gap);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: var(--header-gap);
+  }
+
+  &__theme {
+    --icon-size: 24px;
+    --padding-size: 4px;
+    --gap: clamp(4px, 0.5vw, 8px);
+    font-size: 20px;
+    color: var(--color-text);
+    padding: var(--padding-size);
+    border-radius: 100vw;
+    border: 2px solid currentColor;
+    display: flex;
+    gap: var(--gap);
+    position: relative;
+
+    i {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      display: grid;
+      place-content: center;
+    }
+
+    &::after {
+      content: '';
+      width: var(--icon-size);
+      height: var(--icon-size);
+      border-radius: 100vw;
+      background-color: currentColor;
+      position: absolute;
+      top: 50%;
+      left: var(--padding-size);
+      transform: translateY(-50%);
+      transition: all 0.3s ease;
+    }
+
+    &:not(.dark)::after {
+      transform: translateY(-50%) translateX(calc(var(--icon-size) + var(--gap)));
+    }
+  }
+}
