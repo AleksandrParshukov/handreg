@@ -150,7 +150,7 @@ label[for]:not([for=""]) {
 
 .h1 {
   font-weight: 500;
-  font-size: 76px;
+  font-size: clamp(70px, 5vw, 85px);
   line-height: 1.1;
   text-transform: uppercase;
 }
