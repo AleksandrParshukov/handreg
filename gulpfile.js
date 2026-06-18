@@ -56,6 +56,14 @@ const animations = () => {
         output: {
           filename: 'animations.js',
         },
+        module: {
+          rules: [
+            {
+              test: /\.css$/i,
+              use: ['style-loader', 'css-loader'],
+            },
+          ],
+        },
       }),
     )
     .pipe(gulp.dest('docs/js'))

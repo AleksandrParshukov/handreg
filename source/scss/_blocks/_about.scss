@@ -1,0 +1,97 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(120px, 13vw, 200px);
+
+  &__content {
+    max-width: 650px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  &__team {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(24px, 2vw, 32px);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__photo {
+    width: 100%;
+    aspect-ratio: 266 / 341;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::before,
+    &::after,
+    .about__corner::before,
+    .about__corner::after {
+      content: '';
+    }
+
+    &::before,
+    &::after,
+    .about__corner::before,
+    .about__corner::after {
+      width: 32px;
+      height: 32px;
+      background-color: var(--color-primary);
+      position: absolute;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      top: 0;
+      right: 0;
+    }
+
+    .about__corner::before {
+      bottom: 0;
+      left: 0;
+    }
+
+    .about__corner::after {
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    margin-block: 24px 8px;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    opacity: 0.6;
+  }
+}
