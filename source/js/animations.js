@@ -63,7 +63,7 @@ function init_reveals() {
       scrollTrigger: {
         trigger: item,
         start: 'top 85%',
-        once: true,
+        toggleActions: 'play none none reverse',
       },
     });
   });
@@ -83,7 +83,7 @@ function init_reveals() {
       scrollTrigger: {
         trigger: '.about',
         start: 'top 60%',
-        once: true,
+        toggleActions: 'play none none reverse',
       },
     },
   );
