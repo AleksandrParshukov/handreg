@@ -338,8 +338,6 @@ function init_services_accordion() {
       display: 'block',
     });
 
-    $item.removeClass('is-open');
-
     var tl = gsap.timeline({
       onComplete: function () {
         $panel.css({
@@ -347,6 +345,7 @@ function init_services_accordion() {
           overflow: '',
           display: 'none',
         });
+        $item.removeClass('is-open');
       },
     });
 

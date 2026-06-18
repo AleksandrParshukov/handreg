@@ -39,20 +39,24 @@
 .h1 {
   font-weight: 500;
   font-size: clamp(70px, 5vw, 85px);
-  line-height: 1.1;
+  line-height: 1.2;
   text-transform: uppercase;
   mix-blend-mode: difference;
 }
 
 .h2 {
-  font-weight: 500;
-  font-size: clamp(56px, 4.7vw, 72px);
+  font-weight: 400;
+  font-size: clamp(56px, 4.5vw, 72px);
   line-height: 0.9;
-  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.text-accent {
+  color: var(--accent-primary);
 }
 
 .section {
-  padding-block: 100px;
+  padding-block: 120px;
   padding-inline: var(--section-inline-padding);
   background-color: var(--color-primary);
   position: relative;

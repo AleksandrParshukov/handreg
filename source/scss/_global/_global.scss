@@ -23,9 +23,9 @@ html {
   }
 
   &.dark-theme {
-    --color-text: rgb(204, 215, 250);
-    --color-primary: rgb(12, 10, 17);
-    --accent-primary: rgb(61, 26, 143);
+    --color-text: rgb(255, 255, 255);
+    --color-primary: rgb(3, 3, 3);
+    --accent-primary: rgb(102, 55, 211);
     --accent-secondary: rgb(14, 31, 109);
 
     .header__logo {
