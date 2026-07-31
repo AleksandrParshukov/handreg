@@ -1,10 +1,18 @@
 .main-nav {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: var(--header-gap);
 
   &__contacts {
-    margin-right: var(--header-gap);
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 2.2vw, 24px);
+
+    .main-nav__link {
+      opacity: 0.8;
+    }
   }
 
   &__list {

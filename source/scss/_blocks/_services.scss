@@ -84,7 +84,7 @@
   &__media {
     grid-area: media;
     align-self: start;
-    width: 120px;
+    width: 219px;
     height: 0;
     opacity: 0;
     visibility: hidden;
@@ -100,8 +100,9 @@
   }
 
   &__caption {
+    font-family: 'Unbounded', sans-serif;
     font-weight: 500;
-    font-size: clamp(24px, 2.3vw, 36px);
+    font-size: clamp(24px, 2.1vw, 32px);
     line-height: 1.2;
     color: var(--color-text);
     text-transform: uppercase;
@@ -160,15 +161,17 @@
     gap: clamp(24px, 2.1vw, 32px);
   }
 
-  &__price {
+  &__price {font-family: "Unbounded", sans-serif;
     font-weight: 500;
-    font-size: clamp(24px, 2.1vw, 32px);
+    font-size: clamp(16px, 2.1vw, 24px);
     line-height: 1.2;
   }
 
   &__link {
+    font-family: 'Unbounded', sans-serif;
     font-weight: 400;
     font-size: clamp(16px, 1.2vw, 18px);
+    text-transform: uppercase;
     display: flex;
     align-items: center;
     gap: 4px;

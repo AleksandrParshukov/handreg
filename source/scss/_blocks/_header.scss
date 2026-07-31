@@ -13,6 +13,7 @@
   z-index: 1000;
 
   &__menu {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: var(--header-gap);
@@ -31,7 +32,7 @@
     gap: var(--gap);
     position: relative;
 
-    i {
+    span {
       width: var(--icon-size);
       height: var(--icon-size);
       display: grid;

@@ -1,3 +1,5 @@
+@use "../_global/variables";
+
 .modal {
   display: none;
   position: fixed;
@@ -126,7 +128,7 @@
   }
 }
 
-@media (max-width: $sm) {
+@media (max-width: variables.$sm) {
   .modal {
     &__dialog {
       max-width: 90vw !important;

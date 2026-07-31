@@ -1,7 +1,11 @@
 .banner {
   height: 100vh;
-  padding-block: 100px 60px;
+  padding-block: calc(60px + var(--header-height)) 60px;
   margin-top: calc(-1 * var(--header-height));
+  background:
+    radial-gradient(82.21% 114.41% at 70% 60%, rgba(59, 91, 255, 0.33) 0%, rgba(59, 91, 255, 0) 50%),
+    radial-gradient(86.2% 119.96% at 30% 30%, rgba(124, 92, 255, 0.33) 0%, rgba(124, 92, 255, 0) 55%);
+  border-block: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,29 +15,29 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 32px;
     position: relative;
     z-index: 1;
-
-    h1 {
-      margin-top: 60px;
-    }
   }
 
   &__text {
+    font-weight: 400;
     font-size: 18px;
-    max-width: 400px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 430px;
     word-break: normal;
     overflow-wrap: normal;
   }
 
   &__img {
-    width: 100%;
-    height: 100%;
+    width: 552px;
+    height: 549px;
     object-fit: contain;
+    margin-inline: auto;
     display: block;
     position: absolute;
-    inset: 0;
+    inset: auto 0 0;
   }
 
   &__grid {
@@ -66,20 +70,31 @@
     --y: 50%;
     --radius: 100vw;
 
-    font-weight: 500;
-    font-size: 22px;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.125;
     text-transform: uppercase;
     text-align: center;
-    width: 200px;
-    height: 200px;
-    display: grid;
-    place-content: center;
+    width: 240px;
+    height: 240px;
+    background: linear-gradient(152.3deg, #f18533 8.18%, #ff5100 60.91%, #ffdc5c 91.82%);
+    border-radius: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
     overflow: hidden;
     position: relative;
     transition: color 0.4s ease;
 
     span {
+      z-index: 2;
+    }
+
+    svg {
+      flex-shrink: 0;
       z-index: 2;
     }
 
@@ -111,8 +126,8 @@
   }
 
   &__contacts {
-    font-weight: 500;
-    font-size: clamp(20px, 2.1vw, 32px);
+    font-weight: 600;
+    font-size: clamp(14px, 1.5vw, 20px);
     display: flex;
     gap: 16px;
 
@@ -141,5 +156,10 @@
         }
       }
     }
+  }
+
+  &__cube {
+    position: absolute;
+    inset: 0;
   }
 }

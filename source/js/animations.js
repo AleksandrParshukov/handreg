@@ -158,7 +158,7 @@ function init_magnetic_buttons() {
         ease: 'power3.out',
       });
 
-      gsap.to($button.find('span'), {
+      gsap.to($button.find('span, svg'), {
         x: x * TEXT_STRENGTH,
         y: y * TEXT_STRENGTH,
         duration: MAGNETIC_DURATION,
@@ -174,7 +174,7 @@ function init_magnetic_buttons() {
         ease: 'elastic.out(1, 0.3)',
       });
 
-      gsap.to($button.find('span'), {
+      gsap.to($button.find('span, svg'), {
         x: 0,
         y: 0,
         duration: RESET_DURATION,
@@ -213,6 +213,11 @@ function init_banner_img_parallax() {
     ease: 'power3.out',
   });
 
+  const rotateTo = gsap.quickTo(img, 'rotation', {
+    duration: 0.8,
+    ease: 'power3.out',
+  });
+
   $wrap.on('mouseenter', function () {
     rect = this.getBoundingClientRect();
   });
@@ -225,8 +230,8 @@ function init_banner_img_parallax() {
     const relX = e.clientX - rect.left;
     const relY = e.clientY - rect.top;
 
-    const x = ((relX - rect.width / 2) / rect.width) * 12;
-    const y = ((relY - rect.height / 2) / rect.height) * 12;
+    const x = ((relX - rect.width / 2) / rect.width) * 24;
+    const y = ((relY - rect.height / 2) / rect.height) * 24;
 
     xTo(x);
     yTo(y);
@@ -241,6 +246,45 @@ function init_banner_img_parallax() {
     rotateXTo(0);
     rotateYTo(0);
   });
+}
+
+function init_banner_idle_animation() {
+  const $img = $('.banner__img');
+  if (!$img.length) return;
+
+  const img = $img[0];
+
+  gsap.set(img, { x: 0, y: 0, rotation: 0, scale: 1 });
+
+  function animateIdle() {
+    const x = (Math.random() - 0.5) * 20; // -10…10
+    const y = (Math.random() - 0.5) * 20;
+    const rotation = (Math.random() - 0.5) * 4; // -2…2
+    const scale = 0.98 + Math.random() * 0.04; // 0.98…1.02
+
+    gsap.to(img, {
+      x,
+      y,
+      rotation,
+      scale,
+      duration: 2,
+      ease: 'sine.inOut',
+      onComplete: () => {
+        // Возврат к «почти нулю» с небольшим рандомом
+        gsap.to(img, {
+          x: (Math.random() - 0.5) * 4,
+          y: (Math.random() - 0.5) * 4,
+          rotation: (Math.random() - 0.5) * 2,
+          scale: 0.99 + Math.random() * 0.02,
+          duration: 2,
+          ease: 'sine.inOut',
+          onComplete: animateIdle,
+        });
+      },
+    });
+  }
+
+  animateIdle();
 }
 
 function init_services_accordion() {
@@ -396,6 +440,7 @@ $(window).on('load', function () {
 
   init_reveals();
   init_magnetic_buttons();
-  init_banner_img_parallax();
+  // init_banner_img_parallax();
+  init_banner_idle_animation();
   init_services_accordion();
 });

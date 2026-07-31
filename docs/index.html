@@ -16,7 +16,7 @@
   <body>
     <header class="header">
       <a href="/" class="header__logo">
-        <img src="./img/logo.png" width="137" height="35" alt="">
+        <img src="./img/logo.svg" width="165" height="48" alt="">
       </a>
 
       <div class="header__menu">
@@ -27,7 +27,7 @@
         </button>
 
         <nav class="main-nav">
-          <ul class="main-nav__contacts main-nav__list">
+          <ul class="main-nav__contacts">
             <li><a href="tel:+79111781828" class="main-nav__link">+7 (911) 178-18-28</a></li>
             <li><a href="mailto:viplanding@mail.ru" class="main-nav__link">viplanding@mail.ru</a></li>
           </ul>
@@ -42,8 +42,22 @@
 
         <div class="header__controls">
           <button class="header__theme dark js_theme_toggle">
-            <i class="fa-regular fa-sun"></i>
-            <i class="fa-regular fa-moon"></i>
+            <span>
+              <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8657 15.819C15.7605 17.1232 14.3068 18.0856 12.6746 18.5937C11.0423 19.1017 9.29919 19.1344 7.64907 18.688C5.99894 18.2415 4.5101 17.3343 3.35675 16.0726C2.20339 14.8108 1.43324 13.2467 1.13639 11.5632C0.839549 9.87969 1.0283 8.14648 1.68055 6.56635C2.3328 4.98622 3.42158 3.62453 4.81948 2.64061C6.21739 1.65669 7.86661 1.09123 9.57415 1.01041C11.2817 0.92959 12.9769 1.33674 14.4615 2.18423C12.8718 2.71705 11.5262 3.80274 10.6693 5.24385C9.81246 6.68496 9.50131 8.38575 9.79245 10.0369C10.0836 11.688 10.9577 13.1798 12.2558 14.241C13.5538 15.3021 15.1897 15.8621 16.8657 15.819Z" stroke="url(#paint0_linear_316_452)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <defs>
+                  <linearGradient id="paint0_linear_316_452" x1="22.9531" y1="9.52344" x2="-2.04688" y2="9.52344" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#4800CF" />
+                    <stop offset="1" stop-color="#3419FF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
           </button>
         </div>
       </div>
@@ -62,8 +76,11 @@
   </div>
 
   <div class="banner__bottom">
-    <a href="#" class="banner__callback glow-btn magneticBtn js_cursor_fill">
+    <a href="#" class="banner__callback magneticBtn js_cursor_fill">
       <span>Обсудить проект</span>
+      <svg width="36" height="32" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.1681 9.07563L0 13.1092V18.1513L20.1681 22.1849V31.2605L35.2941 16.1345L20.1681 0V9.07563Z" fill="currentColor" />
+      </svg>
       <span class="btn_hover"></span>
     </a>
 
@@ -74,7 +91,7 @@
     </div>
   </div>
 
-  <img src="./img/banner-bg.png" alt="" class="banner__img" id="sourceImage" />
+  <img src="./img/banner-cube.png" alt="" class="banner__img" id="sourceImage" />
 </section>
 
 <section class="services section">
@@ -92,7 +109,7 @@
       </div>
 
       <div class="services__media">
-        <img src="./img/computer.svg" class="services__img" width="120" height="120" alt="">
+        <img src="./img/services-c.png" class="services__img" width="219" height="219" alt="">
       </div>
 
       <div class="services__head">
@@ -111,46 +128,8 @@
           <p class="services__price">от 60 000 ₽</p>
           <a href="#" class="services__link">
             <span>Заказать сайт</span>
-            <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 17.5L17 5.5M5 5.5H17V17.5" stroke="currentColor" stroke-width="1.5" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </li>
-    <li class="services__item is-collapsed">
-      <button class="services__toggle" type="button" aria-expanded="false" aria-controls="service-panel-2" id="service-toggle-2">
-        <span class="sr-only">Открыть описание услуги Сайт-визитка</span>
-      </button>
-
-      <div class="services__icon">
-        <i class="fa-regular fa-folder closed"></i>
-        <i class="fa-regular fa-folder-open opened"></i>
-      </div>
-
-      <div class="services__media">
-        <img src="./img/computer.svg" class="services__img" width="120" height="120" alt="">
-      </div>
-
-      <div class="services__head">
-        <h3 class="services__caption">Лендинг</h3>
-      </div>
-
-      <div class="services__panel" id="service-panel-2" role="region" aria-labelledby="service-toggle-2">
-        <ul class="services__benefits">
-          <li>Уникальный дизайн</li>
-          <li>Адаптивная верстка</li>
-          <li>Программирование и натяжка на систему управления</li>
-          <li>Базовое наполнение</li>
-          <li>Базовая оптимизация в подарок</li>
-        </ul>
-
-        <div class="services__bottom">
-          <p class="services__price">от 80 000 ₽</p>
-          <a href="#" class="services__link">
-            <span>Заказать сайт</span>
-            <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 17.5L17 5.5M5 5.5H17V17.5" stroke="currentColor" stroke-width="1.5" />
+            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 5.76465L0.5 7.76465V10.2646L10.5 12.2646V16.7646L18 9.26465L10.5 1.26465V5.76465Z" stroke="currentColor" />
             </svg>
           </a>
         </div>
@@ -158,7 +137,7 @@
     </li>
     <li class="services__item is-collapsed">
       <button class="services__toggle" type="button" aria-expanded="false" aria-controls="service-panel-3" id="service-toggle-3">
-        <span class="sr-only">Открыть описание услуги Сайт-визитка</span>
+        <span class="sr-only">Открыть описание услуги Корпоративный сайт</span>
       </button>
 
       <div class="services__icon">
@@ -167,7 +146,7 @@
       </div>
 
       <div class="services__media">
-        <img src="./img/computer.svg" class="services__img" width="120" height="120" alt="">
+        <img src="./img/services-k.png" class="services__img" width="219" height="219" alt="">
       </div>
 
       <div class="services__head">
@@ -187,46 +166,8 @@
           <p class="services__price">от 90 000 ₽</p>
           <a href="#" class="services__link">
             <span>Заказать сайт</span>
-            <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 17.5L17 5.5M5 5.5H17V17.5" stroke="currentColor" stroke-width="1.5" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </li>
-    <li class="services__item is-collapsed">
-      <button class="services__toggle" type="button" aria-expanded="false" aria-controls="service-panel-4" id="service-toggle-4">
-        <span class="sr-only">Открыть описание услуги Сайт-визитка</span>
-      </button>
-
-      <div class="services__icon">
-        <i class="fa-regular fa-folder closed"></i>
-        <i class="fa-regular fa-folder-open opened"></i>
-      </div>
-
-      <div class="services__media">
-        <img src="./img/computer.svg" class="services__img" width="120" height="120" alt="">
-      </div>
-
-      <div class="services__head">
-        <h3 class="services__caption">Сайт-каталог</h3>
-      </div>
-
-      <div class="services__panel" id="service-panel-4" role="region" aria-labelledby="service-toggle-4">
-        <ul class="services__benefits">
-          <li>Уникальный дизайн</li>
-          <li>Адаптивная верстка</li>
-          <li>Программирование и натяжка на систему управления</li>
-          <li>Базовое наполнение (50 страниц)</li>
-          <li>Базовая оптимизация в подарок (50 страниц)</li>
-        </ul>
-
-        <div class="services__bottom">
-          <p class="services__price">от 120 000 ₽</p>
-          <a href="#" class="services__link">
-            <span>Заказать сайт</span>
-            <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 17.5L17 5.5M5 5.5H17V17.5" stroke="currentColor" stroke-width="1.5" />
+            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 5.76465L0.5 7.76465V10.2646L10.5 12.2646V16.7646L18 9.26465L10.5 1.26465V5.76465Z" stroke="currentColor" />
             </svg>
           </a>
         </div>
@@ -234,16 +175,21 @@
     </li>
     <li class="services__item is-collapsed">
       <button class="services__toggle" type="button" aria-expanded="false" aria-controls="service-panel-5" id="service-toggle-5">
-        <span class="sr-only">Открыть описание услуги Сайт-визитка</span>
+        <span class="sr-only">Открыть описание услуги Интернет-магазин</span>
       </button>
 
       <div class="services__icon">
-        <i class="fa-regular fa-folder closed"></i>
-        <i class="fa-regular fa-folder-open opened"></i>
+        <svg class="closed" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.3337 25.3333C29.3337 26.0406 29.0527 26.7189 28.5526 27.219C28.0525 27.719 27.3742 28 26.667 28H5.33366C4.62641 28 3.94814 27.719 3.44804 27.219C2.94794 26.7189 2.66699 26.0406 2.66699 25.3333V6.66667C2.66699 5.95942 2.94794 5.28115 3.44804 4.78105C3.94814 4.28095 4.62641 4 5.33366 4H12.0003L14.667 8H26.667C27.3742 8 28.0525 8.28095 28.5526 8.78105C29.0527 9.28115 29.3337 9.95942 29.3337 10.6667V25.3333Z" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <svg class="opened" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.3337 24.6672H7.86699C6.74689 24.6672 6.18683 24.6672 5.75901 24.4492C5.38269 24.2575 5.07673 23.9515 4.88498 23.5752C4.66699 23.1473 4.66699 22.5873 4.66699 21.4672V9.2C4.66699 8.07989 4.66699 7.51984 4.88498 7.09201C5.07673 6.71569 5.38269 6.40973 5.75901 6.21799C6.18683 6 6.74689 6 7.86699 6H11.2968C11.7978 6 12.0482 6 12.2756 6.06905C12.4769 6.13017 12.6641 6.2304 12.8266 6.36397C13.0102 6.51485 13.1491 6.72327 13.427 7.14009L14.5737 8.86044C14.8515 9.27727 14.9905 9.48568 15.1741 9.63656C15.3366 9.77013 15.5238 9.87036 15.725 9.93148C15.9525 10.0005 16.2029 10.0005 16.7038 10.0005H22.0009C22.6203 10.0005 22.9301 10.0005 23.1842 10.0686C23.8747 10.2534 24.4141 10.7928 24.599 11.4833C24.667 11.7374 24.667 12.0472 24.667 12.6667M12.667 18H22.0003" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" />
+          <path d="M7.93748 14.8551C8.19976 14.0683 8.3309 13.6748 8.57414 13.384C8.78894 13.1271 9.06478 12.9283 9.37639 12.8057C9.72924 12.667 10.144 12.667 10.9734 12.667L24.2272 12.6673C25.7262 12.6674 26.4756 12.6674 26.9675 12.9812C27.3982 13.2559 27.7074 13.6849 27.8318 14.1803C27.9739 14.7463 27.7368 15.4573 27.2628 16.8793L25.3962 22.4793C25.1339 23.2663 25.0028 23.6596 24.7595 23.9505C24.5447 24.2073 24.269 24.4061 23.9574 24.5287C23.6044 24.6675 23.1898 24.6675 22.3604 24.6675H9.10654C7.6076 24.6675 6.85814 24.6675 6.36616 24.3537C5.93551 24.0791 5.62628 23.65 5.50188 23.1545C5.35976 22.5887 5.59676 21.8776 6.07075 20.4556L7.93748 14.8551Z" stroke="currentColor" stroke-width="1.33333" />
+        </svg>
       </div>
 
       <div class="services__media">
-        <img src="./img/computer.svg" class="services__img" width="120" height="120" alt="">
+        <img src="./img/services-i.png" class="services__img" width="219" height="219" alt="">
       </div>
 
       <div class="services__head">
@@ -263,8 +209,84 @@
           <p class="services__price">от 140 000 ₽</p>
           <a href="#" class="services__link">
             <span>Заказать сайт</span>
-            <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 17.5L17 5.5M5 5.5H17V17.5" stroke="currentColor" stroke-width="1.5" />
+            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 5.76465L0.5 7.76465V10.2646L10.5 12.2646V16.7646L18 9.26465L10.5 1.26465V5.76465Z" stroke="currentColor" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="services__item is-collapsed">
+      <button class="services__toggle" type="button" aria-expanded="false" aria-controls="service-panel-2" id="service-toggle-2">
+        <span class="sr-only">Открыть описание услуги Лендинг</span>
+      </button>
+
+      <div class="services__icon">
+        <i class="fa-regular fa-folder closed"></i>
+        <i class="fa-regular fa-folder-open opened"></i>
+      </div>
+
+      <div class="services__media">
+        <img src="./img/services-l.png" class="services__img" width="219" height="219" alt="">
+      </div>
+
+      <div class="services__head">
+        <h3 class="services__caption">Лендинг</h3>
+      </div>
+
+      <div class="services__panel" id="service-panel-2" role="region" aria-labelledby="service-toggle-2">
+        <ul class="services__benefits">
+          <li>Уникальный дизайн</li>
+          <li>Адаптивная верстка</li>
+          <li>Программирование и натяжка на систему управления</li>
+          <li>Базовое наполнение</li>
+          <li>Базовая оптимизация в подарок</li>
+        </ul>
+
+        <div class="services__bottom">
+          <p class="services__price">от 80 000 ₽</p>
+          <a href="#" class="services__link">
+            <span>Заказать сайт</span>
+            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 5.76465L0.5 7.76465V10.2646L10.5 12.2646V16.7646L18 9.26465L10.5 1.26465V5.76465Z" stroke="currentColor" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="services__item is-collapsed">
+      <button class="services__toggle" type="button" aria-expanded="false" aria-controls="service-panel-4" id="service-toggle-4">
+        <span class="sr-only">Открыть описание услуги Сайт-каталог</span>
+      </button>
+
+      <div class="services__icon">
+        <i class="fa-regular fa-folder closed"></i>
+        <i class="fa-regular fa-folder-open opened"></i>
+      </div>
+
+      <div class="services__media">
+        <img src="./img/services-c.png" class="services__img" width="219" height="219" alt="">
+      </div>
+
+      <div class="services__head">
+        <h3 class="services__caption">Сайт-каталог</h3>
+      </div>
+
+      <div class="services__panel" id="service-panel-4" role="region" aria-labelledby="service-toggle-4">
+        <ul class="services__benefits">
+          <li>Уникальный дизайн</li>
+          <li>Адаптивная верстка</li>
+          <li>Программирование и натяжка на систему управления</li>
+          <li>Базовое наполнение (50 страниц)</li>
+          <li>Базовая оптимизация в подарок (50 страниц)</li>
+        </ul>
+
+        <div class="services__bottom">
+          <p class="services__price">от 120 000 ₽</p>
+          <a href="#" class="services__link">
+            <span>Заказать сайт</span>
+            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 5.76465L0.5 7.76465V10.2646L10.5 12.2646V16.7646L18 9.26465L10.5 1.26465V5.76465Z" stroke="currentColor" />
             </svg>
           </a>
         </div>
@@ -304,6 +326,8 @@
     </li>
   </ul>
 </section>
+
+<script type="module" src="/js/three-app.js"></script>
 
 </main>
 
@@ -467,10 +491,10 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="js/swiper-bundle.min.js"></script>
-<script src="js/jquery.mask.min.js"></script>
-<script src="js/script.js"></script>
-<script src="js/animations.js"></script>
+<script src="/js/swiper-bundle.min.js"></script>
+<script src="/js/jquery.mask.min.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/animations.js"></script>
 </body>
 
 </html>

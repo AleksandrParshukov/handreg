@@ -1,3 +1,5 @@
+@use "../_global/variables";
+
 .footer {
   padding-block: 60px;
   background-color: var(--color-black);
@@ -71,7 +73,7 @@
   }
 }
 
-@media (max-width: $ssm) {
+@media (max-width: variables.$ssm) {
   .footer {
     padding-block: 80px;
 

@@ -44,7 +44,10 @@ exports.styles = styles;
 
 // JS
 const js = () => {
-  return gulp.src(['source/js/*.js', '!source/js/animations.js']).pipe(gulp.dest('docs/js')).pipe(sync.stream());
+  return gulp
+    .src(['source/js/*.js', '!source/js/animations.js', '!source/js/three-app.js'])
+    .pipe(gulp.dest('docs/js'))
+    .pipe(sync.stream());
 };
 
 const animations = () => {
