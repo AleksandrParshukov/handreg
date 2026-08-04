@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 function init_reveals() {
+  const SLIDE_UP_CLASSES = ['.services', '.cases', '.steps', '.about'];
+
   const tl = gsap.timeline();
 
   tl.fromTo(
@@ -63,30 +65,36 @@ function init_reveals() {
       scrollTrigger: {
         trigger: item,
         start: 'top 85%',
-        toggleActions: 'play none none reverse',
+        toggleActions: 'play none none once',
       },
     });
   });
 
-  gsap.fromTo(
-    '.aboutSlideUp',
-    {
-      y: 50,
-      opacity: 0,
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 1.2,
-      ease: 'power3.out',
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: '.about',
-        start: 'top 60%',
-        toggleActions: 'play none none reverse',
+  $.each(SLIDE_UP_CLASSES, function (key, item) {
+    init_slide_up(item);
+  });
+
+  function init_slide_up(class_name) {
+    gsap.fromTo(
+      class_name + 'SlideUp',
+      {
+        y: 50,
+        opacity: 0,
       },
-    },
-  );
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: 'power3.out',
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: class_name,
+          start: 'top 60%',
+          toggleActions: 'play none none once',
+        },
+      },
+    );
+  }
 
   /* var $panels = $('.section').not(':last');
 
