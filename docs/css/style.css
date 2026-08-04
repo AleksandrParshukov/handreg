@@ -44,7 +44,7 @@ html.modal-open {
 html.dark-theme {
   --color-text: rgb(255, 255, 255);
   --color-primary: rgb(3, 3, 3);
-  --accent-primary: rgb(102, 55, 211);
+  --accent-primary: rgb(101, 59, 204);
   --accent-secondary: rgb(14, 31, 109);
 }
 
@@ -197,7 +197,7 @@ label[for]:not([for=""]) {
 .h1 {
   font-family: "Unbounded", sans-serif;
   font-weight: 800;
-  font-size: clamp(56px, 4.5vw, 76px);
+  font-size: clamp(68px, 6vw, 90px);
   line-height: 1.2;
   text-transform: uppercase;
   mix-blend-mode: difference;
@@ -790,7 +790,7 @@ label[for]:not([for=""]) {
   height: 100vh;
   padding-block: calc(60px + var(--header-height)) 60px;
   margin-top: calc(-1 * var(--header-height));
-  background: radial-gradient(82.21% 114.41% at 70% 60%, rgba(59, 91, 255, 0.33) 0%, rgba(59, 91, 255, 0) 50%), radial-gradient(86.2% 119.96% at 30% 30%, rgba(124, 92, 255, 0.33) 0%, rgba(124, 92, 255, 0) 55%);
+  background: radial-gradient(82.21% 114.41% at 70% 60%, rgba(59, 91, 255, 0.25) 0%, rgba(59, 91, 255, 0) 50%), radial-gradient(86.2% 119.96% at 30% 30%, rgba(124, 92, 255, 0.25) 0%, rgba(124, 92, 255, 0) 55%);
   border-block: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
@@ -929,6 +929,7 @@ label[for]:not([for=""]) {
 }
 
 .services {
+  border-block: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -1166,6 +1167,44 @@ label[for]:not([for=""]) {
   line-height: 1;
   text-align: center;
   opacity: 0.6;
+}
+
+.cases {
+  background: url("../img/cases-bg.png") no-repeat bottom center/100% auto;
+}
+.cases__slider {
+  margin-top: 130px;
+  margin-inline: calc(-1 * var(--section-inline-padding));
+  overflow: visible;
+}
+.cases__slider .swiper-slide {
+  width: 756px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.cases__slider .swiper-slide-prev .cases__img::before,
+.cases__slider .swiper-slide-next .cases__img::before {
+  background: linear-gradient(to bottom, #4800cf, #6713ab, #5859d4);
+}
+.cases__img {
+  padding: 5px;
+  position: relative;
+}
+.cases__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.cases__img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #bd0a9c, #f18533, #6713ab);
+  border-radius: 12px;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 }
 
 .bannerSlideUp {

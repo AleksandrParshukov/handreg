@@ -254,88 +254,41 @@ function init_cookie() {
 }
 
 function init_sliders() {
-  const $projects = $('.js_project');
+  const $cases_slider = $('.js_cases_slider');
 
-  if (!$projects.length) {
+  if (!$cases_slider.length) {
     return false;
   }
 
-  const BASE_OPTIONS = {};
+  const slider = new Swiper($cases_slider[0], {
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    loop: true,
+    loopedSlides: 3,
+    speed: 1000,
 
-  let desktop_dir = 'horizontal',
-    mobile_dir = 'vertical';
+    effect: 'coverflow',
+    grabCursor: true,
 
-  if ($projects.data('dir') == 'alt') {
-    desktop_dir = 'vertical';
-    mobile_dir = 'horizontal';
-  }
+    coverflowEffect: {
+      rotate: 0,
+      stretch: -85,
+      depth: 210,
+      modifier: 3,
+      slideShadows: false,
+    },
 
-  $projects.each(function () {
-    const $slider = $(this).find('.js_slider'),
-      $thumb_slider = $(this).find('.js_thumb_slider'),
-      $slider_prev = $(this).find('.js_slider_prev'),
-      $slider_next = $(this).find('.js_slider_next');
+    autoplay: {
+      delay: 5000,
+    },
+  });
 
-    if (!$slider.length || !$thumb_slider.length) {
-      return true;
-    }
+  $cases_slider.on('click', '.swiper-slide-prev', function () {
+    slider.slidePrev();
+  });
 
-    var thumbs_slider = new Swiper($thumb_slider[0], {
-      slidesPerView: 'auto',
-      freeMode: {
-        enabled: true,
-        sticky: true,
-      },
-      watchSlidesProgress: true,
-      watchSlidesVisibility: true,
-      watchOverflow: true,
-      spaceBetween: 4,
-      direction: mobile_dir,
-      breakpoints: {
-        992: {
-          spaceBetween: 12,
-          direction: desktop_dir,
-        },
-      },
-      on: {
-        init: check_slides_fit,
-        resize: check_slides_fit,
-      },
-    });
-
-    var swiper = new Swiper($slider[0], {
-      loop: true,
-      effect: 'fade',
-      navigation: {
-        nextEl: $slider_next[0],
-        prevEl: $slider_prev[0],
-      },
-      thumbs: {
-        swiper: thumbs_slider,
-      },
-    });
-
-    function check_slides_fit(swiper) {
-      const $slides = $thumb_slider.find('.swiper-slide'),
-        $container = $thumb_slider.parent(),
-        is_horizontal = swiper.params.direction === 'horizontal';
-      let slides_total_size = 0,
-        container_size = 0;
-
-      if (is_horizontal) {
-        container_size = $container.width();
-        $slides.each(function () {
-          slides_total_size += $(this).outerWidth(true);
-        });
-      } else {
-        container_size = $container.height();
-        $slides.each(function () {
-          slides_total_size += $(this).outerHeight(true);
-        });
-      }
-
-      $container.toggleClass('hide-nav', slides_total_size <= container_size);
-    }
+  $cases_slider.on('click', '.swiper-slide-next', function () {
+    slider.slideNext();
   });
 }
 

@@ -1,0 +1,47 @@
+.cases {
+  background: url('../img/cases-bg.png') no-repeat bottom center / 100% auto;
+
+  &__slider {
+    margin-top: 130px;
+    margin-inline: calc(-1 * var(--section-inline-padding));
+    overflow: visible;
+
+    .swiper-slide {
+      width: 756px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .swiper-slide-prev,
+    .swiper-slide-next {
+      .cases__img {
+        &::before {
+          background: linear-gradient(to bottom, #4800cf, #6713ab, #5859d4);
+        }
+      }
+    }
+  }
+
+  &__img {
+    padding: 5px;
+    position: relative;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to left, #bd0a9c, #f18533, #6713ab);
+      border-radius: 12px;
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
+  }
+}
