@@ -280,6 +280,8 @@ function init_sliders() {
 
     autoplay: {
       delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
   });
 
