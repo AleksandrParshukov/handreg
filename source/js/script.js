@@ -4,17 +4,17 @@ function init_theme_toggle() {
   if (!$theme_toggle.length) return;
 
   if (localStorage.getItem('theme') === 'light') {
-    $('html').removeClass('dark-theme');
+    $('html').addClass('light-theme');
     $theme_toggle.removeClass('dark');
   } else {
-    $('html').addClass('dark-theme');
+    $('html').removeClass('light-theme');
     $theme_toggle.addClass('dark');
   }
 
   $theme_toggle.on('click', function (evt) {
     evt.preventDefault();
-    $('html').toggleClass('dark-theme');
-    localStorage.setItem('theme', $('html').hasClass('dark-theme') ? 'dark' : '');
+    $('html').toggleClass('light-theme');
+    localStorage.setItem('theme', $('html').hasClass('light-theme') ? '' : 'dark');
     $theme_toggle.toggleClass('dark');
   });
 }

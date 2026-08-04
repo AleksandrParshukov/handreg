@@ -249,14 +249,19 @@ function init_banner_img_parallax() {
 }
 
 function init_banner_idle_animation() {
-  const $img = $('.banner__img');
+  const $img = $('.banner__img, .services__img');
   if (!$img.length) return;
 
-  const img = $img[0];
+  // const img = $img[0];
 
-  gsap.set(img, { x: 0, y: 0, rotation: 0, scale: 1 });
+  // gsap.set(img, { x: 0, y: 0, rotation: 0, scale: 1 });
 
-  function animateIdle() {
+  $img.each(function () {
+    gsap.set(this, { x: 0, y: 0, rotation: 0, scale: 1 });
+    animateIdle(this);
+  });
+
+  function animateIdle(img) {
     const x = (Math.random() - 0.5) * 20; // -10…10
     const y = (Math.random() - 0.5) * 20;
     const rotation = (Math.random() - 0.5) * 4; // -2…2
@@ -278,13 +283,15 @@ function init_banner_idle_animation() {
           scale: 0.99 + Math.random() * 0.02,
           duration: 2,
           ease: 'sine.inOut',
-          onComplete: animateIdle,
+          onComplete: () => {
+            animateIdle(img);
+          },
         });
       },
     });
   }
 
-  animateIdle();
+  // animateIdle();
 }
 
 function init_services_accordion() {

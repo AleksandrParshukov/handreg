@@ -19,10 +19,10 @@
   font-display: swap;
 }
 :root {
-  --color-text: rgb(12, 10, 17);
-  --color-primary: rgb(204, 215, 250);
-  --accent-primary: rgb(61, 26, 143);
-  --accent-secondary: rgb(14, 31, 109);
+  --color-text: rgb(255, 255, 255);
+  --color-primary: rgb(3, 3, 3);
+  --accent-primary: rgb(101, 59, 204);
+  --accent-secondary: rgb(27, 35, 124);
   --header-height: 80px;
   --section-inline-padding: clamp(24px, 5.3vw, 80px);
 }
@@ -41,10 +41,10 @@ html {
 html.modal-open {
   overflow: hidden;
 }
-html.dark-theme {
-  --color-text: rgb(255, 255, 255);
-  --color-primary: rgb(3, 3, 3);
-  --accent-primary: rgb(101, 59, 204);
+html.light-theme {
+  --color-text: rgb(12, 10, 17);
+  --color-primary: rgb(204, 215, 250);
+  --accent-primary: rgb(61, 26, 143);
   --accent-secondary: rgb(14, 31, 109);
 }
 
