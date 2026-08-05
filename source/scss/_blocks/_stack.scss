@@ -1,0 +1,23 @@
+.stack {
+  background: linear-gradient(180deg, #3419ff 0%, #7c5cff 100%);
+
+  .swiper-wrapper {
+    cursor: pointer;
+  }
+
+  .swiper-slide {
+    width: max-content;
+    padding-block: 32px;
+  }
+
+  &__text {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #fff;
+    width: max-content;
+  }
+}

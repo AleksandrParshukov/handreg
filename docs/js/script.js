@@ -256,42 +256,118 @@ function init_cookie() {
 function init_sliders() {
   const $cases_slider = $('.js_cases_slider');
 
-  if (!$cases_slider.length) {
-    return false;
+  if ($cases_slider.length) {
+    const slider = new Swiper($cases_slider[0], {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      loop: true,
+      loopedSlides: 3,
+      speed: 0,
+
+      effect: 'coverflow',
+      grabCursor: true,
+
+      coverflowEffect: {
+        rotate: 0,
+        stretch: -85,
+        depth: 210,
+        modifier: 3,
+        slideShadows: false,
+      },
+
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+    });
+
+    $cases_slider.on('click', '.swiper-slide-prev', function () {
+      slider.slidePrev();
+    });
+
+    $cases_slider.on('click', '.swiper-slide-next', function () {
+      slider.slideNext();
+    });
   }
 
-  const slider = new Swiper($cases_slider[0], {
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    loop: true,
-    loopedSlides: 3,
-    speed: 1000,
+  const $stack_slider = $('.js_stack_slider');
 
-    effect: 'coverflow',
-    grabCursor: true,
+  if ($stack_slider.length) {
+    const $wrapper = $stack_slider.find('.swiper-wrapper');
 
-    coverflowEffect: {
-      rotate: 0,
-      stretch: -85,
-      depth: 210,
-      modifier: 3,
-      slideShadows: false,
-    },
+    // Дублируем слайды
+    $wrapper.append($wrapper.html());
 
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-  });
+    const swiper = new Swiper($stack_slider[0], {
+      slidesPerView: 'auto',
+      spaceBetween: 80,
+      freeMode: {
+        enabled: true,
+        momentum: false,
+      },
+      allowTouchMove: true,
+      watchSlidesProgress: true,
+    });
 
-  $cases_slider.on('click', '.swiper-slide-prev', function () {
-    slider.slidePrev();
-  });
+    let animation_id = null;
+    const speed = 0.5;
 
-  $cases_slider.on('click', '.swiper-slide-next', function () {
-    slider.slideNext();
-  });
+    const first_half_width = swiper.slides
+      .slice(0, swiper.slides.length / 2)
+      .reduce((sum, slide) => sum + slide.offsetWidth + swiper.params.spaceBetween, 0);
+
+    function animate() {
+      if (!swiper.destroyed && !swiper.isTouched) {
+        let translate = swiper.getTranslate() - speed;
+
+        if (Math.abs(translate) >= first_half_width) {
+          translate += first_half_width;
+        }
+
+        swiper.setTranslate(translate);
+        swiper.updateProgress(translate);
+        swiper.updateActiveIndex();
+        swiper.updateSlidesClasses();
+      }
+
+      animation_id = requestAnimationFrame(animate);
+    }
+
+    swiper.on('touchStart', () => {
+      cancelAnimationFrame(animation_id);
+    });
+
+    swiper.on('touchEnd', () => {
+      wait_for_swiper();
+    });
+
+    animate();
+
+    let last_translate = null;
+    let stable_frames = 0;
+
+    function wait_for_swiper() {
+      const current_translate = swiper.getTranslate();
+
+      const epsilon = 0.1;
+
+      if (Math.abs(current_translate - last_translate) < epsilon) {
+        stable_frames++;
+
+        if (stable_frames >= 3) {
+          last_time = performance.now();
+          animation_id = requestAnimationFrame(animate);
+          return;
+        }
+      } else {
+        stable_frames = 0;
+        last_translate = current_translate;
+      }
+
+      requestAnimationFrame(wait_for_swiper);
+    }
+  }
 }
 
 function init_cursor_fill() {
