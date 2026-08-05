@@ -207,6 +207,22 @@ function init_form() {
   $('.js_phone_input').on('keydown', function (evt) {
     $(this).mask('+7 (000) 000-00-00');
   });
+
+  $('.floating-label input').on('focus', function () {
+    $(this).closest('.floating-label').addClass('focused');
+  });
+
+  $('.floating-label input').on('blur', function () {
+    if (!$(this).val()) {
+      $(this).closest('.floating-label').removeClass('focused');
+    }
+  });
+
+  $('.floating-label input').each(function () {
+    if ($(this).val()) {
+      $(this).closest('.floating-label').addClass('focused');
+    }
+  });
 }
 
 function init_popups() {

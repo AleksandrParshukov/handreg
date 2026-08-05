@@ -149,10 +149,10 @@ function init_magnetic_buttons() {
     const button = this;
     const label = button.querySelector('span');
 
-    const MAGNETIC_STRENGTH = 0.35,
-      TEXT_STRENGTH = 0.2,
-      MAGNETIC_DURATION = 0.7,
-      RESET_DURATION = 0.7;
+    const MAGNETIC_STRENGTH = $button.data('magnetic-strength') ?? 0.35,
+      TEXT_STRENGTH = $button.data('text-strength') ?? 0.2,
+      MAGNETIC_DURATION = $button.data('magnetic-duration') ?? 0.7,
+      RESET_DURATION = $button.data('reset-duration') ?? 0.7;
 
     $button.on('mousemove', function (e) {
       const rect = button.getBoundingClientRect(),
