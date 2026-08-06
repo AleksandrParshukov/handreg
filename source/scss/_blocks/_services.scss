@@ -1,3 +1,5 @@
+@use '../_global/breakpoints.scss' as *;
+
 .services {
   // border-block: 1px solid rgb(255 255 255 / 0.1);
   display: flex;
@@ -10,6 +12,7 @@
     position: relative;
     display: grid;
     padding: 32px;
+    padding-right: 55px;
     background-color: var(--color-primary);
     border: 1px solid rgba(217, 217, 217, 0.5);
     border-radius: 24px;
@@ -34,7 +37,7 @@
     }
 
     &.is-open {
-      grid-template-columns: 340px 1fr;
+      grid-template-columns: clamp(120px, 22.5vw, 340px) 1fr;
       grid-template-rows: min-content 1fr;
 
       transition: grid-template-columns var(--transition-duration) ease-in-out;
@@ -90,6 +93,13 @@
     height: 0;
     opacity: 0;
     visibility: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
   }
 
   &__head {
@@ -152,6 +162,7 @@
         height: 8px;
         margin-top: 4px;
         background-color: currentColor;
+        flex-shrink: 0;
       }
     }
   }
@@ -217,6 +228,90 @@ html.light-theme {
     &__caption {
       color: var(--accent-primary);
       opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .services {
+    gap: 50px;
+
+    &__item {
+      padding: 24px;
+      padding-right: 48px;
+      border-radius: 18px;
+
+      &.is-open {
+        grid-template-columns: clamp(90px, 18.5vw, 180px) 1fr;
+      }
+
+      &:not(:first-child) {
+        margin-top: -16px;
+      }
+    }
+
+    &__icon {
+      font-size: 20px;
+      top: 45px;
+      right: 18px;
+    }
+
+    &__media {
+      width: 150px;
+    }
+
+    &__head {
+      min-height: 44px;
+    }
+
+    &__caption {
+      font-size: 24px;
+    }
+
+    &__benefits {
+      margin-block: 24px;
+      gap: 8px 24px;
+    }
+
+    &__bottom {
+      margin-bottom: 16px;
+      gap: clamp(18px, 2.1vw, 24px);
+    }
+
+    &__price {
+      font-size: 18px;
+    }
+
+    &__link {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .services {
+    &__media {
+      width: 100px;
+    }
+
+    &__benefits {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .services {
+    &__item {
+      &.is-open {
+        grid-template-columns: 0 1fr;
+      }
+    }
+
+    &__bottom {
+      flex-direction: column;
+      align-items: start;
     }
   }
 }

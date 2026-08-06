@@ -130,6 +130,7 @@
     a {
       text-transform: uppercase;
       position: relative;
+      transition: none;
 
       &::after {
         content: '';
