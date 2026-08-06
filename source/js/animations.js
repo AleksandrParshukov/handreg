@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 function init_reveals() {
   const SLIDE_UP_CLASSES = ['.services', '.cases', '.steps', '.about'];
 
-  const tl = gsap.timeline();
+  let tl = gsap.timeline();
 
   tl.fromTo(
     '.bannerSlideUp',
@@ -21,33 +21,22 @@ function init_reveals() {
       ease: 'power3.out',
       stagger: 0.2,
     },
-  )
-    .from(
-      '.banner__img',
-      {
-        opacity: 0,
-        scale: 0.95,
-        duration: 1.5,
-        ease: 'power3.out',
-      },
-      '<',
-    )
-    .fromTo(
-      '.banner__callback',
-      {
-        opacity: 0,
-        scale: 0.95,
-        y: 20,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-        duration: 0.9,
-        ease: 'power3.out',
-      },
-      '-=0.5',
-    );
+  ).fromTo(
+    '.banner__callback',
+    {
+      opacity: 0,
+      scale: 0.95,
+      y: 20,
+    },
+    {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      duration: 0.9,
+      ease: 'power3.out',
+    },
+    '-=0.5',
+  );
 
   $('.services__item').each(function () {
     var item = this;
@@ -73,6 +62,100 @@ function init_reveals() {
   $.each(SLIDE_UP_CLASSES, function (key, item) {
     init_slide_up(item);
   });
+
+  gsap.fromTo(
+    '.footerSlideRight',
+    {
+      x: -50,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 1.2,
+      ease: 'power3.out',
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: '.footer',
+        start: 'top 95%',
+        toggleActions: 'play none none once',
+      },
+    },
+  );
+
+  gsap.fromTo(
+    '.footerSlideLeft',
+    {
+      x: 50,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 1.2,
+      ease: 'power3.out',
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: '.footer',
+        start: 'top 95%',
+        toggleActions: 'play none none once',
+      },
+    },
+  );
+
+  tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.contacts',
+      start: 'top 60%',
+      toggleActions: 'play none none none',
+      once: true,
+    },
+  });
+
+  tl.fromTo(
+    '.contactsSlideUp',
+    {
+      y: 50,
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1.2,
+      ease: 'power3.out',
+      stagger: 0.2,
+    },
+  );
+
+  gsap.fromTo(
+    '.contactsSlideLeft',
+    {
+      x: 50,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 1.2,
+      ease: 'power3.out',
+      stagger: 0.2,
+    },
+  );
+
+  gsap.fromTo(
+    '.contactsSlideRight',
+    {
+      x: -50,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 1.2,
+      ease: 'power3.out',
+      stagger: 0.2,
+    },
+  );
 
   function init_slide_up(class_name) {
     gsap.fromTo(

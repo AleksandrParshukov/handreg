@@ -1180,7 +1180,7 @@ html.light-theme .about__position {
 }
 .steps__item:hover .steps__num {
   color: var(--color-text);
-  text-shadow: -1px -1px 4px var(--accent-color), 1px -1px 4px var(--accent-color), -1px 1px 4px var(--accent-color), 1px 1px 4px var(--accent-color);
+  text-shadow: -1px -1px 0 var(--accent-color), 1px -1px 0 var(--accent-color), -1px 1px 0 var(--accent-color), 1px 1px 0 var(--accent-color), -1px -1px 4px var(--accent-color), 1px -1px 4px var(--accent-color), -1px 1px 4px var(--accent-color), 1px 1px 4px var(--accent-color);
 }
 .steps__num {
   font-family: "Unbounded", sans-serif;
