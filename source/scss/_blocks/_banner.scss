@@ -1,3 +1,5 @@
+@use '../_global/breakpoints.scss' as *;
+
 .banner {
   height: 100vh;
   padding-block: calc(60px + var(--header-height)) 60px;
@@ -39,7 +41,8 @@
 
   &__img {
     width: 552px;
-    height: 549px;
+    height: auto;
+    aspect-ratio: 552 / 549;
     object-fit: contain;
     margin-inline: auto;
     display: block;
@@ -69,7 +72,8 @@
     text-transform: uppercase;
     text-align: center;
     width: 240px;
-    height: 240px;
+    height: auto;
+    aspect-ratio: 1;
     background: linear-gradient(152.3deg, #f18533 8.18%, #ff5100 60.91%, #ffdc5c 91.82%);
     border-radius: 100vw;
     display: flex;
@@ -119,7 +123,7 @@
 
   &__contacts {
     font-weight: 600;
-    font-size: clamp(14px, 1.5vw, 20px);
+    font-size: clamp(18px, 1.5vw, 20px);
     display: flex;
     gap: 16px;
 
@@ -149,11 +153,6 @@
       }
     }
   }
-
-  &__cube {
-    position: absolute;
-    inset: 0;
-  }
 }
 
 /* html.light-theme {
@@ -163,3 +162,99 @@
       radial-gradient(86.2% 119.96% at 30% 30%, rgba(124, 92, 255, 0.33) 0%, rgba(124, 92, 255, 0) 55%);
   }
 } */
+
+@media (max-width: $ssm) {
+  .banner {
+    &__content {
+      gap: 24px;
+    }
+
+    &__text {
+      font-size: 16px;
+      max-width: 390px;
+    }
+
+    &__img {
+      width: 350px;
+      inset: auto 0 100px auto;
+    }
+
+    &__bottom {
+      gap: clamp(16px, 4vw, 32px);
+    }
+
+    &__callback {
+      font-size: 20px;
+      width: 180px;
+
+      svg {
+        height: 24px;
+      }
+    }
+
+    &__contacts {
+      font-size: 18px;
+
+      a {
+        text-transform: uppercase;
+        position: relative;
+
+        &::after {
+          content: '';
+          width: 100%;
+          height: 4px;
+          background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          right: 0;
+          transform: scaleX(0);
+          transform-origin: right center;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          &::after {
+            transform: scaleX(1);
+            transform-origin: left center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .banner {
+    justify-content: center;
+    gap: 32px;
+
+    &__img {
+      width: 250px;
+      inset: auto 0 0 auto;
+    }
+
+    &__bottom {
+      flex-direction: column-reverse;
+      align-items: start;
+      gap: clamp(24px, 8vw, 120px);
+      flex-grow: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    &__callback {
+      font-size: 16px;
+      width: 150px;
+
+      svg {
+        height: 20px;
+      }
+    }
+
+    &__contacts {
+      margin-bottom: auto;
+      flex-direction: column;
+    }
+  }
+}

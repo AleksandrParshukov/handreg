@@ -19,51 +19,41 @@ function init_theme_toggle() {
   });
 }
 
-function init_header() {
-  function toggleHeaderClass() {
-    if ($(window).scrollTop() > 50) {
-      $('header').addClass('is-scrolled');
-    } else {
-      $('header').removeClass('is-scrolled');
-    }
-  }
-
-  toggleHeaderClass();
-  $(window).on('scroll', toggleHeaderClass);
-}
-
 function init_menu() {
   const $menu_open = $('.js_menu_open'),
     $menu_close = $('.js_menu_close'),
-    $main_nav = $('.main-nav');
+    $menu = $('.header__menu');
+  $main_nav = $('.main-nav');
 
   $menu_open.on('click', function (evt) {
     evt.preventDefault();
 
-    if ($main_nav.is('.open')) {
-      $main_nav.removeClass('open');
-      // $('html').removeClass('modal-open');
+    if ($menu.is('.open')) {
+      $menu.removeClass('open');
     } else {
-      $main_nav.addClass('open');
-      // $('html').addClass('modal-open');
+      $menu.addClass('open');
     }
 
-    $main_nav.on('click', main_nav_click_handler);
+    $menu.on('click', menu_click_handler);
   });
 
   $menu_close.on('click', function (evt) {
     evt.preventDefault();
 
-    $main_nav.removeClass('open');
+    $menu.removeClass('open');
     // $('html').removeClass('modal-open');
-    $main_nav.off('click', main_nav_click_handler);
+    $menu.off('click', main_nav_click_handler);
   });
 
-  function main_nav_click_handler(evt) {
-    if (!$(evt.target).is('.main-nav__content') && !$(evt.target).closest('.main-nav__content').length) {
-      $main_nav.removeClass('open');
-      $('html').removeClass('modal-open');
-      $main_nav.off('click', main_nav_click_handler);
+  function menu_click_handler(evt) {
+    if (
+      !$(evt.target).is($main_nav) &&
+      !$(evt.target).closest($main_nav).length &&
+      !$(evt.target).is($menu_open) &&
+      !$(evt.target).closest($menu_open).length
+    ) {
+      $menu.removeClass('open');
+      $menu.off('click', main_nav_click_handler);
     }
   }
 }
@@ -405,7 +395,6 @@ function init_cursor_fill() {
 }
 
 $(document).ready(function () {
-  init_header();
   init_menu();
   init_form();
   init_modals();

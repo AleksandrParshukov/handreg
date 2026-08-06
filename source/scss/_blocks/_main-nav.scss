@@ -1,3 +1,5 @@
+@use '../_global/breakpoints.scss' as *;
+
 .main-nav {
   width: 100%;
   display: flex;
@@ -46,6 +48,94 @@
       &::after {
         transform: scaleX(1);
         transform-origin: left center;
+      }
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .main-nav {
+    width: 100vw;
+    max-width: 400px;
+    height: 100%;
+    padding: 30px 32px;
+    margin-left: auto;
+    background-color: var(--color-primary);
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: start;
+    overflow: auto;
+    gap: var(--header-gap);
+    position: relative;
+    transform: translateX(20px) scale(0.9);
+    transition: all 0.3s ease;
+
+    &__close {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 24px;
+      right: 24px;
+
+      &::before,
+      &::after {
+        content: '';
+        width: 24px;
+        height: 2px;
+        background-color: var(--color-text);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+      }
+
+      &::before {
+        rotate: 45deg;
+      }
+
+      &::after {
+        rotate: -45deg;
+      }
+    }
+
+    &__contacts {
+      flex-direction: column;
+      align-items: start;
+      gap: 24px;
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: start;
+      gap: 24px;
+    }
+
+    &__link {
+      font-weight: 500;
+      font-size: 26px;
+      text-transform: uppercase;
+      position: relative;
+      white-space: nowrap;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: currentColor;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        transform: scaleX(0);
+        transform-origin: right center;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+          transform-origin: left center;
+        }
       }
     }
   }

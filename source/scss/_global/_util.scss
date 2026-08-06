@@ -1,4 +1,4 @@
-@use 'variables';
+@use '../_global/breakpoints.scss' as *;
 
 .sr-only {
   position: absolute;
@@ -20,28 +20,10 @@
   margin-inline: auto;
 }
 
-.glow-btn {
-  --radius: 12px;
-  --grad: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  background: var(--grad) repeat-y;
-  border-radius: var(--radius);
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 6px 10px -8px 10px;
-    z-index: -1;
-    border-radius: calc(var(--radius) + 6px);
-    background: var(--grad);
-    filter: blur(20px);
-    opacity: 0.6;
-  }
-}
-
 .h1 {
   font-family: 'Unbounded', sans-serif;
   font-weight: 800;
-  font-size: clamp(68px, 6vw, 90px);
+  font-size: clamp(68px, 6.5vw, 100px);
   line-height: 1.2;
   text-transform: uppercase;
   mix-blend-mode: difference;
@@ -93,13 +75,13 @@
   }
 }
 
-@media (min-width: variables.$md) {
+@media (min-width: $md) {
   .to-md {
     display: none !important;
   }
 }
 
-@media (max-width: variables.$md) {
+@media (max-width: $md) {
   .from-md {
     display: none !important;
   }
@@ -113,71 +95,46 @@
   }
 }
 
-@media (min-width: variables.$ssm) {
+@media (min-width: $ssm) {
   .to-ssm {
     display: none !important;
   }
 }
 
-@media (max-width: variables.$ssm) {
+@media (max-width: $ssm) {
   .section {
     padding-block: 80px;
-
-    &--bb {
-      &::after {
-        width: 100vw;
-      }
-    }
-  }
-
-  .slide-btn,
-  .btn-more {
-    font-size: 16px;
   }
 }
 
-@media (min-width: variables.$sm) {
+@media (min-width: $sm) {
   .to-sm {
     display: none !important;
   }
 }
 
-@media (max-width: variables.$sm) {
+@media (max-width: $sm) {
   .from-sm {
     display: none !important;
   }
 
-  .btn {
-    font-size: 18px;
-  }
-
   .h1 {
     font-size: 36px;
-    text-align: center;
-  }
-
-  .slide-btn-outline {
-    --icon-height: 32px;
   }
 }
 
-@media (min-width: variables.$xs) {
+@media (min-width: $xs) {
   .to-xs {
     display: none !important;
   }
 }
 
-@media (max-width: variables.$xs) {
+@media (max-width: $xs) {
   .from-xs {
     display: none !important;
   }
 
   .wrapper {
     padding-inline: 16px;
-  }
-
-  .badge {
-    font-size: 14px;
-    padding: 8px 16px;
   }
 }

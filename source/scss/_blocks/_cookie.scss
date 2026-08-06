@@ -1,4 +1,4 @@
-@use "../_global/variables";
+@use '../_global/breakpoints.scss' as *;
 
 .cookie {
   font-weight: 500;
@@ -39,7 +39,7 @@
   }
 }
 
-@media (max-width: variables.$md) {
+@media (max-width: $md) {
   .cookie {
     .wrapper {
       flex-wrap: wrap;
@@ -53,7 +53,7 @@
   }
 }
 
-@media (max-width: variables.$md) {
+@media (max-width: $md) {
   .cookie {
     .wrapper {
       gap: 16px;

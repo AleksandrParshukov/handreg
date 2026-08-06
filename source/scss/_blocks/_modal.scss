@@ -1,4 +1,4 @@
-@use "../_global/variables";
+@use '../_global/breakpoints.scss' as *;
 
 .modal {
   display: none;
@@ -128,7 +128,7 @@
   }
 }
 
-@media (max-width: variables.$sm) {
+@media (max-width: $sm) {
   .modal {
     &__dialog {
       max-width: 90vw !important;

@@ -1,9 +1,9 @@
-@use '_global/variables.scss';
 @use '_global/fonts.scss';
 @use '_global/global.scss';
 @use '_global/util.scss';
 
 @use '_blocks/header.scss';
+@use '_blocks/burger-menu.scss';
 @use '_blocks/main-nav.scss';
 @use '_blocks/footer.scss';
 @use '_blocks/contact-form.scss';

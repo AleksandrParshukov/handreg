@@ -1,5 +1,6 @@
 const gulp = require('gulp'),
-  sass = require('gulp-sass')(require('sass')),
+  dartSass = require('sass'),
+  sass = require('gulp-sass')(dartSass),
   autoprefixer = require('gulp-autoprefixer'),
   uglify = require('gulp-uglify'),
   gulpif = require('gulp-if'),
@@ -15,13 +16,12 @@ const gulp = require('gulp'),
 const isDev = process.env.NODE_ENV === 'dev' ? true : false;
 
 function scss(done) {
-  gulp
+  return gulp
     .src('source/scss/**/*.scss')
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(gulp.dest('docs/css'))
     .pipe(sync.stream());
-  done();
 }
 
 exports.scss = scss;

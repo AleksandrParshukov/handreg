@@ -1,3 +1,5 @@
+@use '../_global/breakpoints.scss' as *;
+
 :root {
   --color-text: rgb(255 255 255);
   --color-primary: rgb(3 3 3);
@@ -144,5 +146,12 @@ label[for]:not([for='']) {
 @keyframes loader-spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: $ssm) {
+  :root {
+    --header-height: 55px;
+    --section-inline-padding: clamp(16px, 3.5vw, 32px);
   }
 }
