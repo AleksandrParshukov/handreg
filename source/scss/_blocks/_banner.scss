@@ -2,15 +2,21 @@
   height: 100vh;
   padding-block: calc(60px + var(--header-height)) 60px;
   margin-top: calc(-1 * var(--header-height));
-  background:
-    radial-gradient(82.21% 114.41% at 70% 60%, rgba(59, 91, 255, 0.25) 0%, rgba(59, 91, 255, 0) 50%),
-    radial-gradient(86.2% 119.96% at 30% 30%, rgba(124, 92, 255, 0.25) 0%, rgba(124, 92, 255, 0) 55%);
-  border-block: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  overflow: hidden;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    background:
+      radial-gradient(82.21% 114.41% at 70% 60%, rgba(59, 91, 255, 0.25) 0%, rgba(59, 91, 255, 0) 50%),
+      radial-gradient(86.2% 119.96% at 30% 30%, rgba(124, 92, 255, 0.25) 0%, rgba(124, 92, 255, 0) 55%);
+    filter: blur(40px);
+    position: absolute;
+    inset: 0;
+  }
 
   &__content {
     display: flex;
@@ -24,10 +30,11 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-text);
     max-width: 430px;
     word-break: normal;
     overflow-wrap: normal;
+    opacity: 0.8;
   }
 
   &__img {
@@ -38,22 +45,6 @@
     display: block;
     position: absolute;
     inset: auto 0 0;
-  }
-
-  &__grid {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    pointer-events: none;
-  }
-
-  .cell {
-    background: var(--color-primary);
-    transform-origin: 50% 0%;
-    will-change: transform, opacity;
-    backface-visibility: hidden;
   }
 
   &__bottom {
@@ -74,6 +65,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 1.125;
+    color: #ffffff;
     text-transform: uppercase;
     text-align: center;
     width: 240px;
@@ -163,3 +155,11 @@
     inset: 0;
   }
 }
+
+/* html.light-theme {
+  .banner {
+    background:
+      radial-gradient(82.21% 114.41% at 70% 60%, rgba(59, 91, 255, 0.33) 0%, rgba(59, 91, 255, 0) 50%),
+      radial-gradient(86.2% 119.96% at 30% 30%, rgba(124, 92, 255, 0.33) 0%, rgba(124, 92, 255, 0) 55%);
+  }
+} */

@@ -61,3 +61,12 @@
     color: #d9d9d9;
   }
 }
+
+html.light-theme {
+  .about {
+    &__position {
+      color: var(--color-text);
+      opacity: 0.6;
+    }
+  }
+}

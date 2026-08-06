@@ -37,7 +37,7 @@
 
     &:hover {
       .steps__num {
-        color: #ffffff;
+        color: var(--color-text);
         text-shadow:
           -1px -1px 4px var(--accent-color),
           1px -1px 4px var(--accent-color),
@@ -58,7 +58,7 @@
       -1px 1px 0 var(--accent-color),
       1px 1px 0 var(--accent-color);
 
-      transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
 
   &__name {
@@ -74,5 +74,13 @@
     font-size: 13px;
     line-height: 1.6;
     color: #9a9a9a;
+  }
+}
+
+html.light-theme {
+  .steps {
+    &__text {
+      color: var(--color-text);
+    }
   }
 }

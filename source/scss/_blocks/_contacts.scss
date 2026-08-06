@@ -31,7 +31,7 @@
   &__item {
     font-weight: 700;
     font-size: 15px;
-    color: #f4f4f2;
+    color: var(--color-text);
     padding-block: 15px 20px;
     border-top: 1px solid rgb(255 255 255 / 0.12);
 
@@ -53,7 +53,7 @@
   &__link {
     font-weight: 700;
     font-size: 15px;
-    color: #f4f4f2;
+    color: var(--color-text);
 
     &:hover {
       color: var(--accent-primary);
@@ -70,6 +70,26 @@
     .contacts__caption {
       font-weight: 800;
       letter-spacing: 0.08em;
+    }
+  }
+}
+
+html.light-theme {
+  .contacts {
+    &__wrapper {
+      border-bottom-color: transparent;
+    }
+
+    &__item {
+      border-top-color: rgb(3 3 3 / 0.12);
+
+      &:last-child {
+        border-bottom-color: rgb(3 3 3 / 0.12);
+      }
+    }
+
+    &__caption {
+      color: var(--color-text);
     }
   }
 }

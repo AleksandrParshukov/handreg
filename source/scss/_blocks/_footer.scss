@@ -1,5 +1,3 @@
-@use '../_global/variables';
-
 .footer {
   padding-block: 56px 32px;
   display: flex;
@@ -26,6 +24,16 @@
 
     &:hover {
       color: #ffffff;
+    }
+  }
+}
+
+html.light-theme {
+  .footer {
+    &__link {
+      &:hover {
+        color: var(--color-text);
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
   --header-gap: clamp(24px, 4vw, 120px);
   height: var(--header-height);
   padding-inline: var(--section-inline-padding);
-  background: #{"rgb(from var(--color-primary) r g b / 0.25)"};
+  background: rgb(3 3 3 / 0.75);
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
@@ -55,5 +55,11 @@
     &:not(.dark)::after {
       transform: translateY(-50%) translateX(calc(var(--icon-size) + var(--gap)));
     }
+  }
+}
+
+html.light-theme {
+  .header {
+    background: rgba(248, 248, 250, 0.75);
   }
 }

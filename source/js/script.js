@@ -14,7 +14,7 @@ function init_theme_toggle() {
   $theme_toggle.on('click', function (evt) {
     evt.preventDefault();
     $('html').toggleClass('light-theme');
-    localStorage.setItem('theme', $('html').hasClass('light-theme') ? '' : 'dark');
+    localStorage.setItem('theme', $('html').hasClass('light-theme') ? 'light' : '');
     $theme_toggle.toggleClass('dark');
   });
 }
@@ -278,7 +278,7 @@ function init_sliders() {
       centeredSlides: true,
       loop: true,
       loopedSlides: 3,
-      speed: 0,
+      speed: 1000,
 
       effect: 'coverflow',
       grabCursor: true,

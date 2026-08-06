@@ -108,7 +108,7 @@
       width: 16px;
       height: 16px;
       background-color: #ffffff;
-      border: 1px solid #767676;
+      border: 1px solid #ffffff;
       border-radius: 3px;
       flex-shrink: 0;
       transition: all 0.125s ease;
@@ -141,6 +141,43 @@
 
     &::after {
       opacity: 1;
+    }
+  }
+}
+
+html.light-theme {
+  .callback {
+    background: rgb(255 255 255);
+    border-color: rgb(3 3 3 / 0.1);
+
+    &__caption {
+      color: var(--color-text);
+    }
+
+    &__input {
+      color: var(--color-text);
+      border-bottom-color: rgb(3 3 3 / 0.2);
+    }
+
+    .personal-data {
+      font-size: 12px;
+      color: #7a7a7a;
+    }
+  }
+
+  .checkbox {
+    label {
+      color: var(--color-text);
+
+      &::before {
+        border-color: var(--color-text);
+      }
+    }
+
+    input:checked + label {
+      &::before {
+        border-color: var(--accent-primary);
+      }
     }
   }
 }
