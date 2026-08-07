@@ -1,3 +1,5 @@
+@use '../_global/breakpoints.scss' as *;
+
 .footer {
   padding-block: 56px 32px;
   display: flex;
@@ -35,5 +37,13 @@ html.light-theme {
         color: var(--color-text);
       }
     }
+  }
+}
+
+@media (max-width: $xs) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
   }
 }

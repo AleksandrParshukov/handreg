@@ -1,3 +1,5 @@
+@use '../_global/breakpoints.scss' as *;
+
 .callback {
   height: max-content;
   padding: 60px 32px;
@@ -178,6 +180,28 @@ html.light-theme {
       &::before {
         border-color: var(--accent-primary);
       }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .callback {
+    padding: 36px 24px;
+
+    &__caption {
+      font-size: 22px;
+    }
+
+    &__row {
+      gap: 16px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .callback {
+    &__caption {
+      font-size: 18px;
     }
   }
 }

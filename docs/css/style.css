@@ -606,6 +606,13 @@ html.light-theme .footer__link:hover {
   color: var(--color-text);
 }
 
+@media (max-width: 565.5px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+}
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -1719,6 +1726,42 @@ html.light-theme .contacts__caption {
   color: var(--color-text);
 }
 
+@media (max-width: 991.5px) {
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .contacts__info {
+    margin-bottom: 0;
+  }
+  .contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contacts__item {
+    flex: 1 1 40%;
+  }
+  .contacts__item:nth-last-child(2), .contacts__item:last-child {
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .contacts__details {
+    margin-top: 0;
+  }
+}
+@media (max-width: 565.5px) {
+  .contacts__list {
+    flex-direction: column;
+  }
+  .contacts__item {
+    flex: 1 1 40%;
+  }
+  .contacts__item:nth-last-child(2) {
+    padding-bottom: 20px;
+    border-bottom: none;
+  }
+}
 .callback {
   height: -moz-max-content;
   height: max-content;
@@ -1871,6 +1914,22 @@ html.light-theme .checkbox input:checked + label::before {
   border-color: var(--accent-primary);
 }
 
+@media (max-width: 767.5px) {
+  .callback {
+    padding: 36px 24px;
+  }
+  .callback__caption {
+    font-size: 22px;
+  }
+  .callback__row {
+    gap: 16px;
+  }
+}
+@media (max-width: 565.5px) {
+  .callback__caption {
+    font-size: 18px;
+  }
+}
 .bannerSlideUp {
   display: inline-block;
   will-change: transform, opacity;
