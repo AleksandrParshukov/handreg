@@ -273,18 +273,31 @@ function init_sliders() {
       effect: 'coverflow',
       grabCursor: true,
 
-      coverflowEffect: {
-        rotate: 0,
-        stretch: -85,
-        depth: 210,
-        modifier: 3,
-        slideShadows: false,
-      },
-
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
+      },
+
+      breakpoints: {
+        576: {
+          coverflowEffect: {
+            rotate: 0,
+            stretch: -25,
+            depth: 180,
+            modifier: 3,
+            slideShadows: false,
+          },
+        },
+        992: {
+          coverflowEffect: {
+            rotate: 0,
+            stretch: -85,
+            depth: 210,
+            modifier: 3,
+            slideShadows: false,
+          },
+        },
       },
     });
 

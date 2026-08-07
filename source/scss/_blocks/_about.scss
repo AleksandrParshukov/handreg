@@ -1,3 +1,5 @@
+@use '../_global/breakpoints.scss' as *;
+
 .about {
   display: flex;
   justify-content: space-between;
@@ -67,6 +69,52 @@ html.light-theme {
     &__position {
       color: var(--color-text);
       opacity: 0.6;
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .about {
+    gap: clamp(36px, 7vw, 60px);
+
+    &__content {
+      max-width: 400px;
+      flex-shrink: 0;
+      gap: 32px;
+    }
+
+    &__desc {
+      font-size: 16px;
+    }
+
+    &__team {
+      max-width: 430px;
+      gap: clamp(16px, 2vw, 24px);
+    }
+
+    &__name {
+      font-size: 18px;
+      margin-block: 16px 4px;
+    }
+
+    &__position {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .about {
+    flex-direction: column;
+    gap: 40px;
+
+    &__content {
+      max-width: none;
+      gap: 24px;
+    }
+
+    &__team {
+      margin-inline: auto;
     }
   }
 }

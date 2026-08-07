@@ -1,3 +1,5 @@
+@use '../_global/breakpoints.scss' as *;
+
 .steps {
   &__list {
     margin-top: 80px;
@@ -85,6 +87,63 @@ html.light-theme {
   .steps {
     &__text {
       color: var(--color-text);
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .steps {
+    &__list {
+      margin-top: 60px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    &__item {
+      flex: 1 1 40%;
+
+      &::before {
+        width: 14px;
+        height: 14px;
+        margin-bottom: 16px;
+      }
+    }
+
+    &__num {
+      font-size: 26px;
+    }
+
+    &__name {
+      margin-block: 8px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .steps {
+    &__list {
+      margin-top: 32px;
+    }
+
+    &__item {
+      flex-basis: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+
+      &::before {
+        margin-bottom: 0;
+        margin-right: 16px;
+      }
+    }
+
+    &__name {
+      margin-left: auto;
+    }
+
+    &__text {
+      width: 100%;
+      margin-top: 8px;
     }
   }
 }
