@@ -7,9 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
 
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-package/favicon-96x96.png">
+    <link rel="icon" href="img/favicon-package/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="img/favicon-package/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon-package/site.webmanifest">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
     <link rel="stylesheet" href="css/font-awesome/all.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Стили страницы -->
+    @@if (typeof css !== 'undefined') {
+    <link rel="stylesheet" href="/css/@@css.css" /> }
+
     <title>ХЭНДРЕГ</title>
   </head>
 
@@ -53,7 +66,7 @@
           </ul>
 
           <ul class="main-nav__list">
-            <li><a href="#" class="main-nav__link">Услуги</a></li>
+            <li><a href="/services.html" class="main-nav__link">Услуги</a></li>
             <li><a href="#" class="main-nav__link">Портфолио</a></li>
             <li><a href="#" class="main-nav__link">Студия</a></li>
             <li><a href="#" class="main-nav__link">Контакты</a></li>

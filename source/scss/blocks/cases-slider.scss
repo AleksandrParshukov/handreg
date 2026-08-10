@@ -1,7 +1,7 @@
 @use '../_global/breakpoints.scss' as *;
 
 .cases {
-  background: url('../img/cases-bg.png') no-repeat bottom center / 100% auto;
+  background: url('../../img/cases-bg.png') no-repeat bottom center / 100% auto;
 
   &__slider {
     margin-top: 130px;

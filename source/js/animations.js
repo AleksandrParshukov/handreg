@@ -4,8 +4,18 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 function init_reveals() {
-  const SLIDE_UP_CLASSES = ['.services', '.cases', '.steps', '.about'];
+  const reveal_defaults = {
+    duration: 1.2,
+    ease: 'power3.out',
+    stagger: 0.2,
+  };
 
+  const scroll_defaults = {
+    start: 'top 60%',
+    toggleActions: 'play none none once',
+  };
+
+  /* ====== Banner ====== */
   let tl = gsap.timeline();
 
   tl.fromTo(
@@ -17,9 +27,7 @@ function init_reveals() {
     {
       y: 0,
       opacity: 1,
-      duration: 1.2,
-      ease: 'power3.out',
-      stagger: 0.2,
+      ...reveal_defaults,
     },
   ).fromTo(
     '.banner__callback',
@@ -38,31 +46,31 @@ function init_reveals() {
     '-=0.5',
   );
 
+  /* ====== Services ====== */
   $('.services__item').each(function () {
     var item = this;
 
-    gsap.set(item, {
-      x: 40,
-      autoAlpha: 0,
-    });
-
-    gsap.to(item, {
-      x: 0,
-      autoAlpha: 1,
-      duration: 0.7,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: item,
-        start: 'top 85%',
-        toggleActions: 'play none none once',
+    gsap.fromTo(
+      item,
+      {
+        x: 40,
+        autoAlpha: 0,
       },
-    });
+      {
+        x: 0,
+        autoAlpha: 1,
+        duration: 0.7,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 85%',
+          toggleActions: 'play none none once',
+        },
+      },
+    );
   });
 
-  $.each(SLIDE_UP_CLASSES, function (key, item) {
-    init_slide_up(item);
-  });
-
+  /* ====== Footer ====== */
   gsap.fromTo(
     '.footerSlideRight',
     {
@@ -72,9 +80,7 @@ function init_reveals() {
     {
       x: 0,
       opacity: 1,
-      duration: 1.2,
-      ease: 'power3.out',
-      stagger: 0.2,
+      ...reveal_defaults,
       scrollTrigger: {
         trigger: '.footer',
         start: 'top 95%',
@@ -92,9 +98,7 @@ function init_reveals() {
     {
       x: 0,
       opacity: 1,
-      duration: 1.2,
-      ease: 'power3.out',
-      stagger: 0.2,
+      ...reveal_defaults,
       scrollTrigger: {
         trigger: '.footer',
         start: 'top 95%',
@@ -103,30 +107,7 @@ function init_reveals() {
     },
   );
 
-  tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.contacts',
-      start: 'top 60%',
-      toggleActions: 'play none none none',
-      once: true,
-    },
-  });
-
-  tl.fromTo(
-    '.contactsSlideUp',
-    {
-      y: 50,
-      opacity: 0,
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 1.2,
-      ease: 'power3.out',
-      stagger: 0.2,
-    },
-  );
-
+  /* ====== Contacts ====== */
   gsap.fromTo(
     '.contactsSlideLeft',
     {
@@ -136,9 +117,12 @@ function init_reveals() {
     {
       x: 0,
       opacity: 1,
-      duration: 1.2,
-      ease: 'power3.out',
-      stagger: 0.2,
+      ...reveal_defaults,
+      scrollTrigger: {
+        trigger: '.contacts',
+        ...scroll_defaults,
+        once: true,
+      },
     },
   );
 
@@ -151,15 +135,21 @@ function init_reveals() {
     {
       x: 0,
       opacity: 1,
-      duration: 1.2,
-      ease: 'power3.out',
-      stagger: 0.2,
+      ...reveal_defaults,
+      scrollTrigger: {
+        trigger: '.contacts',
+        ...scroll_defaults,
+      },
     },
   );
 
-  function init_slide_up(class_name) {
+  /* ====== Other ====== */
+  $('[data-slide-up]').each(function () {
+    const $section = $(this);
+    const $items = $section.find('[data-slide-up-item]');
+
     gsap.fromTo(
-      class_name + 'SlideUp',
+      $items,
       {
         y: 50,
         opacity: 0,
@@ -167,61 +157,14 @@ function init_reveals() {
       {
         y: 0,
         opacity: 1,
-        duration: 1.2,
-        ease: 'power3.out',
-        stagger: 0.2,
+        ...reveal_defaults,
         scrollTrigger: {
-          trigger: class_name,
-          start: 'top 60%',
-          toggleActions: 'play none none once',
+          trigger: $section[0],
+          ...scroll_defaults,
         },
       },
     );
-  }
-
-  /* var $panels = $('.section').not(':last');
-
-  $panels.each(function (i, panel) {
-    var $panel = $(panel);
-    var $innerPanel = $panel.find('.section-inner').first();
-
-    var panelHeight = $innerPanel.outerHeight();
-    var windowHeight = $(window).height();
-    var difference = panelHeight - windowHeight;
-
-    var fakeScrollRatio = difference > 0 ? difference / (difference + windowHeight) : 0;
-
-    if (fakeScrollRatio) {
-      $panel.css('margin-bottom', panelHeight * fakeScrollRatio + 'px');
-    }
-
-    var tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: panel,
-        start: 'bottom bottom',
-        end: function () {
-          return fakeScrollRatio ? '+=' + $innerPanel.outerHeight() : 'bottom top';
-        },
-        pinSpacing: false,
-        pin: true,
-        scrub: true,
-      },
-    });
-
-    if (fakeScrollRatio) {
-      tl.to($innerPanel[0], {
-        yPercent: -100,
-        y: window.innerHeight,
-        duration: 1 / (1 - fakeScrollRatio) - 1,
-        ease: 'none',
-      });
-    }
-
-    tl.fromTo(panel, { scale: 1, opacity: 1 }, { scale: 0.7, opacity: 0.5, duration: 0.9 }).to(panel, {
-      opacity: 0,
-      duration: 0.1,
-    });
-  }); */
+  });
 }
 
 function init_magnetic_buttons() {

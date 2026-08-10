@@ -1,0 +1,115 @@
+.contacts {
+  padding-bottom: 0;
+}
+.contacts__wrapper {
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas: "info form" "list form" "details form";
+  -moz-column-gap: 80px;
+  column-gap: 80px;
+}
+.contacts__info {
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  grid-area: info;
+}
+.contacts__info > p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #8a8a8a;
+}
+.contacts__form {
+  grid-area: form;
+}
+.contacts__item {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-text);
+  padding-block: 15px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.contacts__item:last-child {
+  padding-bottom: 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.contacts__caption {
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6a6a6a;
+  margin-bottom: 8px;
+}
+.contacts__link {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-text);
+}
+.contacts__link:hover {
+  color: var(--accent-primary);
+}
+.contacts__details {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.9;
+  color: #8a8a8a;
+  margin-top: 16px;
+}
+.contacts__details .contacts__caption {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+html.light-theme .contacts__wrapper {
+  border-bottom-color: transparent;
+}
+html.light-theme .contacts__item {
+  border-top-color: rgba(3, 3, 3, 0.12);
+}
+html.light-theme .contacts__item:last-child {
+  border-bottom-color: rgba(3, 3, 3, 0.12);
+}
+html.light-theme .contacts__caption {
+  color: var(--color-text);
+}
+
+@media (max-width: 991.5px) {
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .contacts__info {
+    margin-bottom: 0;
+  }
+  .contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contacts__item {
+    flex: 1 1 40%;
+  }
+  .contacts__item:nth-last-child(2), .contacts__item:last-child {
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .contacts__details {
+    margin-top: 0;
+  }
+}
+@media (max-width: 565.5px) {
+  .contacts__list {
+    flex-direction: column;
+  }
+  .contacts__item {
+    flex: 1 1 40%;
+  }
+  .contacts__item:nth-last-child(2) {
+    padding-bottom: 20px;
+    border-bottom: none;
+  }
+}

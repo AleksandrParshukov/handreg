@@ -1,4 +1,4 @@
-@@include('./_header.html')
+@@include('./_header.html', {css: "index"})
 
 <section class="banner section">
   <div class="banner__content">
@@ -29,8 +29,8 @@
   <img src="./img/banner-cube.png" alt="" class="banner__img" id="sourceImage" />
 </section>
 
-<section class="services section">
-  <h2 class="h2 servicesSlideUp">Закажите сайт под ключ</h2>
+<section class="services section" data-slide-up>
+  <h2 class="h2" data-slide-up-item>Закажите сайт под ключ</h2>
 
   <ul class="services__list">
     <li class="services__item is-collapsed">
@@ -225,10 +225,10 @@
   </ul>
 </section>
 
-<section class="cases section">
-  <h2 class="h2 casesSlideUp">Портфолио</h2>
+<section class="cases section" data-slide-up>
+  <h2 class="h2" data-slide-up-item>Портфолио</h2>
 
-  <div class="cases__slider swiper casesSlideUp js_cases_slider">
+  <div class="cases__slider swiper js_cases_slider" data-slide-up-item>
     <div class="swiper-wrapper">
       <div class="swiper-slide ">
         <div class="cases__img">
@@ -259,11 +259,11 @@
   </div>
 </section>
 
-<section class="steps section">
-  <h2 class="h2 stepsSlideUp">Прозрачный процесс<br> от идеи до результата</h2>
+<section class="steps section" data-slide-up>
+  <h2 class="h2" data-slide-up-item>Прозрачный процесс<br> от идеи до результата</h2>
 
   <ul class="steps__list">
-    <li class="steps__item stepsSlideUp">
+    <li class="steps__item" data-slide-up-item>
       <p class="steps__num">01</p>
       <p class="steps__name">Брифинг</p>
       <p class="steps__text">
@@ -272,7 +272,7 @@
         техническое задание.
       </p>
     </li>
-    <li class="steps__item stepsSlideUp">
+    <li class="steps__item" data-slide-up-item>
       <p class="steps__num">02</p>
       <p class="steps__name">Дизайн</p>
       <p class="steps__text">
@@ -281,7 +281,7 @@
         разработки.
       </p>
     </li>
-    <li class="steps__item stepsSlideUp">
+    <li class="steps__item" data-slide-up-item>
       <p class="steps__num">03</p>
       <p class="steps__name">Разработка</p>
       <p class="steps__text">
@@ -289,7 +289,7 @@
         каждый шаг процесса. Никаких сюрпризов.
       </p>
     </li>
-    <li class="steps__item stepsSlideUp">
+    <li class="steps__item" data-slide-up-item>
       <p class="steps__num">04</p>
       <p class="steps__name">Запуск</p>
       <p class="steps__text">
@@ -301,11 +301,11 @@
   </ul>
 </section>
 
-<section class="about section">
-  <div class="about__content aboutSlideUp">
+<section class="about section" data-slide-up>
+  <div class="about__content" data-slide-up-item>
     <h2 class="h2">О нас</h2>
 
-    <div class="about__desc desc aboutSlideUp">
+    <div class="about__desc desc" data-slide-up-item>
       <p>Наша СЕО веб-студия «Хэндрег» с 2014 года разрабатывает сайты под ключ: </p>
       <p>интернет-магазины, лендинги, корпоративные сайты, каталоги и сайты-визитки.</p>
       <p>Мы помогаем бизнесу не только запуститься онлайн, но и привлекать клиентов:</p>
@@ -314,7 +314,7 @@
   </div>
 
   <ul class="about__team">
-    <li class="about__card aboutSlideUp">
+    <li class="about__card" data-slide-up-item>
       <div class="about__photo">
         <img src="./img/olja.jpg" width="266" height="341" alt="">
       </div>
@@ -322,7 +322,7 @@
       <p class="about__name">Ольга Ионова</p>
       <p class="about__position">Руководитель веб-студии</p>
     </li>
-    <li class="about__card aboutSlideUp">
+    <li class="about__card" data-slide-up-item>
       <div class="about__photo">
         <img src="./img/ilya.jpg" width="266" height="341" alt="">
       </div>
@@ -367,9 +367,9 @@
   </div>
 </section>
 
-<section class="contacts section">
+<section class="contacts section" data-slide-up>
   <div class="contacts__wrapper">
-    <div class="contacts__info contactsSlideUp">
+    <div class="contacts__info" data-slide-up-item>
       <h2 class="h2">Веб-студия<br> Хэндрег &mdash; СПб</h2>
       <p>SEO веб-студия. Создаём и продвигаем сайты под ключ по всей России.</p>
     </div>
@@ -426,7 +426,7 @@
         </div>
       </div>
 
-      <button type="submit" class="callback__btn magneticBtn" data-magnetic-strength="0.1" data-text-strength="0.175" >
+      <button type="submit" class="callback__btn magneticBtn" data-magnetic-strength="0.1" data-text-strength="0.175">
         <span>Отправить заявку</span>
         <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M10.5 5.76465L0.5 7.76465V10.2646L10.5 12.2646V16.7646L18 9.26465L10.5 1.26465V5.76465Z" stroke="currentColor" />

@@ -227,12 +227,13 @@
 
 @media (max-width: $xs) {
   .banner {
+    padding-bottom: 85px;
     justify-content: center;
     gap: 32px;
 
     &__img {
       width: 250px;
-      inset: auto 0 0 auto;
+      inset: auto 0 40px auto;
     }
 
     &__bottom {

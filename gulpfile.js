@@ -81,7 +81,7 @@ const html = () => {
   // return gulp.src('source/*.html').pipe(gulp.dest('docs'));
 
   return gulp
-    .src('source/[^_]*.html')
+    .src(['source/**/*.html', '!source/**/_*.html'], { base: 'source' })
     .pipe(
       fileinclude({
         prefix: '@@',
@@ -142,7 +142,7 @@ const reload = (done) => {
 
 // Watcher
 const watcher = () => {
-  gulp.watch('source/scss/**/*.scss', gulp.series(scss));
+  gulp.watch('source/scss/**/*.scss', gulp.series(scss, reload));
   gulp.watch('source/js/*.js', gulp.series(js, reload));
   gulp.watch('source/js/animations.js', gulp.series(animations, reload));
   gulp.watch('source/*.html', gulp.series(html, reload));

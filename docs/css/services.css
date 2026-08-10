@@ -1,0 +1,219 @@
+@import 'blocks/services.css';
+@import 'blocks/cases.css';
+@import 'blocks/contacts.css';
+@import 'blocks/callback.css';
+.section {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.section__text {
+  font-weight: 400;
+  font-size: 18px;
+  color: #b3b3b3;
+  margin-top: 12px;
+}
+
+.cards {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, min-content);
+  gap: 20px;
+}
+.cards.serv .card:nth-child(n+7) .card__price {
+  color: #7fa0ff;
+}
+.cards.tpy {
+  margin-top: 32px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.cards.tpy .card__note {
+  text-align: start;
+}
+.cards.threeD {
+  grid-template-rows: repeat(3, min-content);
+}
+.cards.threeD .card {
+  grid-row: span 3;
+}
+
+.card {
+  padding: 27px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  gap: 14px;
+}
+.card__name {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--color-text);
+  grid-column: span 2;
+}
+.card__text {
+  font-weight: 400;
+  font-size: 13px;
+  color: #9a9a9a;
+  grid-column: span 2;
+}
+.card__price {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  white-space: nowrap;
+  color: var(--accent-primary);
+  align-self: end;
+}
+.card__note {
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: end;
+  color: #6a6a6a;
+  justify-self: end;
+  align-self: end;
+}
+
+.benefits {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.benefits li {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #b3b3b3;
+  min-width: 160px;
+  flex: 1 1 22%;
+}
+.benefits li i {
+  font-size: 18px;
+  color: #7fa0ff;
+  margin-bottom: 14px;
+}
+
+.video .card {
+  padding: clamp(36px, 4vw, 60px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(24px, 2.5vw, 40px);
+}
+.video .card__text {
+  font-size: 16px;
+  color: #adadad;
+  margin-top: 14px;
+}
+.video .card__price {
+  font-weight: 800;
+  font-size: 32px;
+  text-align: right;
+}
+.video .card__note {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: right;
+  color: #8a8a8a;
+}
+.video__price-wrap {
+  flex-shrink: 0;
+}
+
+.contacts__wrapper {
+  grid-template-areas: "info info" "list form" "details form";
+}
+.contacts__details {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #9a9a9a;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.contacts__details .card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  flex: 1 1 40%;
+}
+.contacts__details .num {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--accent-primary);
+}
+
+html.light-theme .card {
+  background-color: rgba(3, 3, 3, 0.04);
+  border-color: rgba(3, 3, 3, 0.1);
+}
+html.light-theme .bright .card {
+  background-color: #f7f7fb;
+}
+
+@media (max-width: 991.5px) {
+  .cards {
+    margin-top: 60px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .card {
+    padding: 24px;
+  }
+}
+@media (max-width: 767.5px) {
+  .card__name {
+    font-size: 14px;
+  }
+  .card__price {
+    font-size: 14px;
+  }
+  .video .card {
+    padding: clamp(24px, 4.5vw, 36px);
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+  }
+  .video .card__text {
+    font-size: 14px;
+  }
+  .video .card__price {
+    font-size: 24px;
+    text-align: start;
+  }
+  .video .card__note {
+    font-size: 13px;
+  }
+  .video__price-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+}
+@media (max-width: 565.5px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .card {
+    padding: 16px;
+  }
+  .benefits {
+    margin-top: 32px;
+  }
+}
