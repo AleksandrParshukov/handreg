@@ -70,6 +70,18 @@
       letter-spacing: 0.08em;
     }
   }
+
+  &__map {
+    height: 280px;
+    margin-top: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    overflow: hidden;
+
+    .ymaps3--map-container {
+      border-radius: inherit;
+    }
+  }
 }
 
 html.light-theme {
@@ -138,6 +150,10 @@ html.light-theme {
         padding-bottom: 20px;
         border-bottom: none;
       }
+    }
+
+    &__map {
+      height: 180px;
     }
   }
 }

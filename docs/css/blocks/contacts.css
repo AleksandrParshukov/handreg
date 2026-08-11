@@ -58,6 +58,16 @@
   font-weight: 800;
   letter-spacing: 0.08em;
 }
+.contacts__map {
+  height: 280px;
+  margin-top: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.contacts__map .ymaps3--map-container {
+  border-radius: inherit;
+}
 
 html.light-theme .contacts__wrapper {
   border-bottom-color: transparent;
@@ -106,5 +116,8 @@ html.light-theme .contacts__caption {
   .contacts__item:nth-last-child(2) {
     padding-bottom: 20px;
     border-bottom: none;
+  }
+  .contacts__map {
+    height: 180px;
   }
 }

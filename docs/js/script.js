@@ -35,7 +35,9 @@ function set_map_theme(theme) {
     return;
   }
 
-  map.setTheme(theme);
+  map.update({
+    theme,
+  });
 }
 
 function init_menu() {
@@ -437,16 +439,32 @@ async function init_map() {
 
   await ymaps3.ready;
 
-  const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+  ymaps3.import.registerCdn('https://cdn.jsdelivr.net/npm/{package}', ['@yandex/ymaps3-default-ui-theme@0.0']);
+
+  const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = ymaps3,
+    theme = $('html').hasClass('light-theme') ? 'light' : 'dark';
+
+  const { YMapDefaultMarker } = await ymaps3.import('@yandex/ymaps3-default-ui-theme');
+  const map_center = [30.334391, 59.987753];
 
   map = new YMap($map[0], {
     location: {
-      center: [30.334391, 59.987753],
-      zoom: 17,
+      center: map_center,
+      zoom: 16,
     },
+    theme,
   });
-
   map.addChild(new YMapDefaultSchemeLayer());
+
+  map.addChild(new YMapDefaultFeaturesLayer());
+
+  map.addChild(
+    new YMapDefaultMarker({
+      coordinates: map_center,
+      title: 'Наш офис',
+      subtitle: 'Большой Сампсониевский проспект, 77/7',
+    }),
+  );
 }
 
 $(document).ready(function () {

@@ -133,6 +133,14 @@
     &:hover {
       color: var(--accent-primary);
     }
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--color-text);
+      }
+    }
   }
 
   input:checked + label {

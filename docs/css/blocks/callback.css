@@ -117,6 +117,12 @@
 .checkbox label:hover {
   color: var(--accent-primary);
 }
+.checkbox label a {
+  text-decoration: underline;
+}
+.checkbox label a:hover {
+  color: var(--color-text);
+}
 .checkbox input:checked + label::before {
   background-color: var(--accent-primary);
   border-color: var(--accent-primary);
