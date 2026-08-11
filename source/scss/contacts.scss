@@ -1,0 +1,10 @@
+@use '_global/breakpoints.scss' as *;
+
+@import 'blocks/cases.css';
+@import 'blocks/contacts.css';
+@import 'blocks/callback.css';
+
+.banner {
+  height: max-content;
+  padding-block: calc(100px + var(--header-height)) 100px;
+}

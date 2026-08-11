@@ -21,7 +21,7 @@
 
     <!-- Стили страницы -->
     
-    <link rel="stylesheet" href="/css/index.css" /> 
+    <link rel="stylesheet" href="/css/cases.css" /> 
 
     <title>ХЭНДРЕГ</title>
   </head>
@@ -101,16 +101,20 @@
 <section class="banner section">
   <div class="banner__content">
     <h1 class="h1">
-      <span class="bannerSlideUp">Сайты для </span><br>
-      <span class="bannerSlideUp">вашего <span class="text-accent">бизнеса</span></span>
+      <span class="bannerSlideUp">Создание </span><br>
+      <span class="bannerSlideUp">сайтов <span class="text-accent">под ключ</span></span>
     </h1>
 
-    <p class="banner__text bannerSlideUp">Интернет-магазины, сайты-каталоги, корпоративные сайты, одностраничные лэндинги и сайты-визитки под ключ</p>
+    <p class="banner__text bannerSlideUp">
+      От разработки базовой концепции до
+      запуска рекламной кампании и
+      сопровождения
+    </p>
   </div>
 
   <div class="banner__bottom">
     <a href="#" class="banner__callback magneticBtn js_cursor_fill">
-      <span>Обсудить проект</span>
+      <span>Бриф по разработке сайта</span>
       <svg width="36" height="32" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20.1681 9.07563L0 13.1092V18.1513L20.1681 22.1849V31.2605L35.2941 16.1345L20.1681 0V9.07563Z" fill="currentColor" />
       </svg>
@@ -127,342 +131,74 @@
   <img src="./img/banner-cube.png" alt="" class="banner__img" id="sourceImage" />
 </section>
 
-<section class="services section" data-slide-up>
-  <h2 class="h2" data-slide-up-item>Закажите сайт под ключ</h2>
-
-  <ul class="services__list">
-    <li class="services__item is-collapsed">
-      <button class="services__toggle" type="button" aria-expanded="false" aria-controls="service-panel-1" id="service-toggle-1">
-        <span class="sr-only">Открыть описание услуги Сайт-визитка</span>
-      </button>
-
-      <div class="services__icon">
-        <i class="fa-regular fa-folder closed"></i>
-        <i class="fa-regular fa-folder-open opened"></i>
-      </div>
-
-      <div class="services__media from-xs">
-        <img src="./img/services-c.png" class="services__img" width="219" height="219" alt="">
-      </div>
-
-      <div class="services__head">
-        <h3 class="services__caption">Сайт-визитка</h3>
-      </div>
-
-      <div class="services__panel" id="service-panel-1" role="region" aria-labelledby="service-toggle-1">
-        <ul class="services__benefits">
-          <li>Уникальный дизайн</li>
-          <li>Адаптивная верстка</li>
-          <li>Программирование и натяжка на систему управления</li>
-          <li>Базовое наполнение (до 10 стр)</li>
-        </ul>
-
-        <div class="services__bottom">
-          <p class="services__price">от 60 000 ₽</p>
-          <a href="#" class="services__link">
-            <span>Заказать сайт</span>
-            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.5 5.76465L0.5 7.76465V10.2646L10.5 12.2646V16.7646L18 9.26465L10.5 1.26465V5.76465Z" stroke="currentColor" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </li>
-    <li class="services__item is-collapsed">
-      <button class="services__toggle" type="button" aria-expanded="false" aria-controls="service-panel-3" id="service-toggle-3">
-        <span class="sr-only">Открыть описание услуги Корпоративный сайт</span>
-      </button>
-
-      <div class="services__icon">
-        <i class="fa-regular fa-folder closed"></i>
-        <i class="fa-regular fa-folder-open opened"></i>
-      </div>
-
-      <div class="services__media from-xs">
-        <img src="./img/services-k.png" class="services__img" width="219" height="219" alt="">
-      </div>
-
-      <div class="services__head">
-        <h3 class="services__caption">Корпоратив&shy;ный сайт</h3>
-      </div>
-
-      <div class="services__panel" id="service-panel-3" role="region" aria-labelledby="service-toggle-3">
-        <ul class="services__benefits">
-          <li>Уникальный дизайн</li>
-          <li>Адаптивная верстка</li>
-          <li>Программирование и натяжка на систему управления</li>
-          <li>Базовое наполнение (20 страниц)</li>
-          <li>Базовая оптимизация в подарок (20 страниц)</li>
-        </ul>
-
-        <div class="services__bottom">
-          <p class="services__price">от 90 000 ₽</p>
-          <a href="#" class="services__link">
-            <span>Заказать сайт</span>
-            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.5 5.76465L0.5 7.76465V10.2646L10.5 12.2646V16.7646L18 9.26465L10.5 1.26465V5.76465Z" stroke="currentColor" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </li>
-    <li class="services__item is-collapsed">
-      <button class="services__toggle" type="button" aria-expanded="false" aria-controls="service-panel-5" id="service-toggle-5">
-        <span class="sr-only">Открыть описание услуги Интернет-магазин</span>
-      </button>
-
-      <div class="services__icon">
-        <i class="fa-regular fa-folder closed"></i>
-        <i class="fa-regular fa-folder-open opened"></i>
-      </div>
-
-      <div class="services__media from-xs">
-        <img src="./img/services-i.png" class="services__img" width="219" height="219" alt="">
-      </div>
-
-      <div class="services__head">
-        <h3 class="services__caption">Интернет-магазин</h3>
-      </div>
-
-      <div class="services__panel" id="service-panel-5" role="region" aria-labelledby="service-toggle-5">
-        <ul class="services__benefits">
-          <li>Уникальный дизайн</li>
-          <li>Адаптивная верстка</li>
-          <li>Программирование и натяжка на систему управления</li>
-          <li>Базовое наполнение (50 страниц)</li>
-          <li>Базовая оптимизация в подарок (50 страниц)</li>
-        </ul>
-
-        <div class="services__bottom">
-          <p class="services__price">от 140 000 ₽</p>
-          <a href="#" class="services__link">
-            <span>Заказать сайт</span>
-            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.5 5.76465L0.5 7.76465V10.2646L10.5 12.2646V16.7646L18 9.26465L10.5 1.26465V5.76465Z" stroke="currentColor" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </li>
-    <li class="services__item is-collapsed">
-      <button class="services__toggle" type="button" aria-expanded="false" aria-controls="service-panel-2" id="service-toggle-2">
-        <span class="sr-only">Открыть описание услуги Лендинг</span>
-      </button>
-
-      <div class="services__icon">
-        <i class="fa-regular fa-folder closed"></i>
-        <i class="fa-regular fa-folder-open opened"></i>
-      </div>
-
-      <div class="services__media from-xs">
-        <img src="./img/services-l.png" class="services__img" width="219" height="219" alt="">
-      </div>
-
-      <div class="services__head">
-        <h3 class="services__caption">Лендинг</h3>
-      </div>
-
-      <div class="services__panel" id="service-panel-2" role="region" aria-labelledby="service-toggle-2">
-        <ul class="services__benefits">
-          <li>Уникальный дизайн</li>
-          <li>Адаптивная верстка</li>
-          <li>Программирование и натяжка на систему управления</li>
-          <li>Базовое наполнение</li>
-          <li>Базовая оптимизация в подарок</li>
-        </ul>
-
-        <div class="services__bottom">
-          <p class="services__price">от 80 000 ₽</p>
-          <a href="#" class="services__link">
-            <span>Заказать сайт</span>
-            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.5 5.76465L0.5 7.76465V10.2646L10.5 12.2646V16.7646L18 9.26465L10.5 1.26465V5.76465Z" stroke="currentColor" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </li>
-    <li class="services__item is-collapsed">
-      <button class="services__toggle" type="button" aria-expanded="false" aria-controls="service-panel-4" id="service-toggle-4">
-        <span class="sr-only">Открыть описание услуги Сайт-каталог</span>
-      </button>
-
-      <div class="services__icon">
-        <i class="fa-regular fa-folder closed"></i>
-        <i class="fa-regular fa-folder-open opened"></i>
-      </div>
-
-      <div class="services__media from-xs">
-        <img src="./img/services-c.png" class="services__img" width="219" height="219" alt="">
-      </div>
-
-      <div class="services__head">
-        <h3 class="services__caption">Сайт-каталог</h3>
-      </div>
-
-      <div class="services__panel" id="service-panel-4" role="region" aria-labelledby="service-toggle-4">
-        <ul class="services__benefits">
-          <li>Уникальный дизайн</li>
-          <li>Адаптивная верстка</li>
-          <li>Программирование и натяжка на систему управления</li>
-          <li>Базовое наполнение (50 страниц)</li>
-          <li>Базовая оптимизация в подарок (50 страниц)</li>
-        </ul>
-
-        <div class="services__bottom">
-          <p class="services__price">от 120 000 ₽</p>
-          <a href="#" class="services__link">
-            <span>Заказать сайт</span>
-            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.5 5.76465L0.5 7.76465V10.2646L10.5 12.2646V16.7646L18 9.26465L10.5 1.26465V5.76465Z" stroke="currentColor" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </li>
-  </ul>
-</section>
-
 <section class="cases section" data-slide-up>
   <h2 class="h2" data-slide-up-item>Портфолио</h2>
 
-  <div class="cases__slider swiper js_cases_slider" data-slide-up-item>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide ">
-        <div class="cases__img">
-          <img src="./img/cases-1.png" width="756" height="377" alt="">
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="cases__img">
-          <img src="./img/cases-2.png" width="756" height="377" alt="">
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="cases__img">
-          <img src="./img/cases-3.png" width="756" height="377" alt="">
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="cases__img">
-          <img src="./img/cases-4.png" width="756" height="377" alt="">
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="cases__img">
-          <img src="./img/cases-5.png" width="756" height="377" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <ul class="cases__filter" data-slide-up-item>
+    <li><a href="#" class="cases__filter-link active">Все</a></li>
+    <li><a href="#" class="cases__filter-link">Корпоративные</a></li>
+    <li><a href="#" class="cases__filter-link">Сайты-каталоги</a></li>
+    <li><a href="#" class="cases__filter-link">Интернет-магазины</a></li>
+    <li><a href="#" class="cases__filter-link">Сайты-визитки</a></li>
+    <li><a href="#" class="cases__filter-link">Лендинги</a></li>
+  </ul>
 
-<section class="steps section" data-slide-up>
-  <h2 class="h2" data-slide-up-item>Прозрачный процесс<br> от идеи до результата</h2>
 
-  <ul class="steps__list">
-    <li class="steps__item" data-slide-up-item>
-      <p class="steps__num">01</p>
-      <p class="steps__name">Брифинг</p>
-      <p class="steps__text">
-        Погружаемся в ваш бизнес, изучаем
-        конкурентов и формулируем понятное
-        техническое задание.
+
+  <ul class="cases__list">
+    <li class="cases__item" data-slide-up-item>
+      <img class="cases__img" src="./img/cases-1.png" height="300" alt="">
+      <p class="cases__name">Корпоративные сайты</p>
+      <p class="cases__desc">
+        Медицина, производство, мебель, промышленность, недвижимость, оборудование,
+        услуги
       </p>
     </li>
-    <li class="steps__item" data-slide-up-item>
-      <p class="steps__num">02</p>
-      <p class="steps__name">Дизайн</p>
-      <p class="steps__text">
-        Создаём прототип и финальный дизайн,
-        утверждаем каждый этап вместе с вами до
-        разработки.
+    <li class="cases__item" data-slide-up-item>
+      <img class="cases__img" src="./img/cases-2.png" height="300" alt="">
+      <p class="cases__name">Корпоративные сайты</p>
+      <p class="cases__desc">
+        Медицина, производство, мебель, промышленность, недвижимость, оборудование,
+        услуги
       </p>
     </li>
-    <li class="steps__item" data-slide-up-item>
-      <p class="steps__num">03</p>
-      <p class="steps__name">Разработка</p>
-      <p class="steps__text">
-        Верстаем и программируем сайт, тестируем
-        каждый шаг процесса. Никаких сюрпризов.
+    <li class="cases__item" data-slide-up-item>
+      <img class="cases__img" src="./img/cases-3.png" height="300" alt="">
+      <p class="cases__name">Корпоративные сайты</p>
+      <p class="cases__desc">
+        Медицина, производство, мебель, промышленность, недвижимость, оборудование,
+        услуги
       </p>
     </li>
-    <li class="steps__item" data-slide-up-item>
-      <p class="steps__num">04</p>
-      <p class="steps__name">Запуск</p>
-      <p class="steps__text">
-        Тестируем, оптимизируем, настраиваем
-        аналитику. Сопровождаем в первый месяц
-        после релиза.
+    <li class="cases__item" data-slide-up-item>
+      <img class="cases__img" src="./img/cases-4.png" height="300" alt="">
+      <p class="cases__name">Корпоративные сайты</p>
+      <p class="cases__desc">
+        Медицина, производство, мебель, промышленность, недвижимость, оборудование,
+        услуги
+      </p>
+    </li>
+    <li class="cases__item" data-slide-up-item>
+      <img class="cases__img" src="./img/cases-1.png" height="300" alt="">
+      <p class="cases__name">Корпоративные сайты</p>
+      <p class="cases__desc">
+        Медицина, производство, мебель, промышленность, недвижимость, оборудование,
+        услуги
+      </p>
+    </li>
+    <li class="cases__item" data-slide-up-item>
+      <img class="cases__img" src="./img/cases-2.png" height="300" alt="">
+      <p class="cases__name">Корпоративные сайты</p>
+      <p class="cases__desc">
+        Медицина, производство, мебель, промышленность, недвижимость, оборудование,
+        услуги
       </p>
     </li>
   </ul>
-</section>
 
-<section class="about section" data-slide-up>
-  <div class="about__content" data-slide-up-item>
-    <h2 class="h2">О нас</h2>
-
-    <div class="about__desc desc" data-slide-up-item>
-      <p>Наша СЕО веб-студия «Хэндрег» с 2014 года разрабатывает сайты под ключ: </p>
-      <p>интернет-магазины, лендинги, корпоративные сайты, каталоги и сайты-визитки.</p>
-      <p>Мы помогаем бизнесу не только запуститься онлайн, но и привлекать клиентов:</p>
-      <p>занимаемся SEO-продвижением, контекстной рекламой и комплексным интернет-маркетингом.</p>
-    </div>
-  </div>
-
-  <ul class="about__team">
-    <li class="about__card" data-slide-up-item>
-      <div class="about__photo">
-        <img src="./img/olja.jpg" width="266" height="341" alt="">
-      </div>
-
-      <p class="about__name">Ольга Ионова</p>
-      <p class="about__position">Руководитель веб-студии</p>
-    </li>
-    <li class="about__card" data-slide-up-item>
-      <div class="about__photo">
-        <img src="./img/ilya.jpg" width="266" height="341" alt="">
-      </div>
-
-      <p class="about__name">Илья Ионов</p>
-      <p class="about__position">СЕО</p>
-    </li>
-  </ul>
-</section>
-
-<section class="stack">
-  <div class="stack__slider swiper js_stack_slider">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <p class="stack__text">WordPress</p>
-      </div>
-      <div class="swiper-slide">
-        <p class="stack__text">TILDA</p>
-      </div>
-      <div class="swiper-slide">
-        <p class="stack__text">Bitrix</p>
-      </div>
-      <div class="swiper-slide">
-        <p class="stack__text">UMI</p>
-      </div>
-      <div class="swiper-slide">
-        <p class="stack__text">MODX</p>
-      </div>
-      <div class="swiper-slide">
-        <p class="stack__text">OpenCart</p>
-      </div>
-      <div class="swiper-slide">
-        <p class="stack__text">HTML</p>
-      </div>
-      <div class="swiper-slide">
-        <p class="stack__text">Drupal</p>
-      </div>
-      <div class="swiper-slide">
-        <p class="stack__text">PRESTASHOP</p>
-      </div>
-    </div>
-  </div>
+  <button type="button" class="cases__more magneticBtn" data-slide-up-item data-magnetic-strength="0.1" data-text-strength="0.175">
+    <span>Показать ещё</span>
+  </button>
 </section>
 
 <section class="contacts section" data-slide-up>

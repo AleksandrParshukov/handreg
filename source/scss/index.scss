@@ -7,3 +7,15 @@
 @import 'blocks/stack.css';
 @import 'blocks/contacts.css';
 @import 'blocks/callback.css';
+
+.section {
+  border-bottom: none;
+}
+.contacts {
+  padding-bottom: 0;
+
+  &__wrapper {
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgb(255 255 255 / 0.1);
+  }
+}

@@ -1,11 +1,7 @@
 @use '../_global/breakpoints.scss' as *;
 
 .contacts {
-  padding-bottom: 0;
-
   &__wrapper {
-    padding-bottom: 16px;
-    border-bottom: 1px solid rgb(255 255 255 / 0.1);
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-areas: 'info form' 'list form' 'details form';

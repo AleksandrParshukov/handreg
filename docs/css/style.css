@@ -208,8 +208,15 @@ label[for]:not([for=""]) {
 .section {
   padding-block: 100px;
   padding-inline: var(--section-inline-padding);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   z-index: 1;
+}
+.section__text {
+  font-weight: 400;
+  font-size: 18px;
+  color: #b3b3b3;
+  margin-top: 12px;
 }
 
 .loader {
