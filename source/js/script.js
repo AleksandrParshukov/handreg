@@ -461,8 +461,8 @@ async function init_map() {
   map.addChild(
     new YMapDefaultMarker({
       coordinates: map_center,
-      title: 'Наш офис',
-      subtitle: 'Большой Сампсониевский проспект, 77/7',
+      title: 'Хэндрег',
+      subtitle: 'Веб-студия',
     }),
   );
 }
