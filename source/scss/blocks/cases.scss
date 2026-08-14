@@ -113,6 +113,17 @@
 
 html.light-theme {
   .cases {
+    &::before {
+      content: '';
+      filter: blur(40px);
+      background:
+        radial-gradient(193.56% 48.59% at 30.03% 60%, rgba(59, 91, 255, 0.33) 0%, rgba(59, 91, 255, 0) 50%),
+        radial-gradient(202.94% 50.95% at -46.65% 30%, rgba(124, 92, 255, 0.33) 0%, rgba(124, 92, 255, 0) 55%);
+
+      position: absolute;
+      inset: 0;
+    }
+
     &__filter-link {
       color: var(--color-text);
       border-color: rgb(3 3 3 / 0.3);

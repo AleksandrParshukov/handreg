@@ -42,6 +42,14 @@
   z-index: -1;
 }
 
+html.light-theme .cases::before {
+  content: "";
+  filter: blur(40px);
+  background: radial-gradient(193.56% 48.59% at 30.03% 60%, rgba(59, 91, 255, 0.33) 0%, rgba(59, 91, 255, 0) 50%), radial-gradient(202.94% 50.95% at -46.65% 30%, rgba(124, 92, 255, 0.33) 0%, rgba(124, 92, 255, 0) 55%);
+  position: absolute;
+  inset: 0;
+}
+
 @media (max-width: 991.5px) {
   .cases {
     background-size: auto 80%;
