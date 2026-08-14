@@ -1,6 +1,4 @@
 @import 'blocks/cases.css';
-@import 'blocks/contacts.css';
-@import 'blocks/callback.css';
 .banner {
   height: -moz-max-content;
   height: max-content;

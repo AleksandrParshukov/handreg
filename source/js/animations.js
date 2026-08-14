@@ -165,6 +165,90 @@ function init_reveals() {
       },
     );
   });
+  
+  $('[data-fade-in]').each(function () {
+    const $section = $(this);
+    const $items = $section.find('[data-fade-in-item]');
+
+    gsap.fromTo(
+      $items,
+      {
+        scale: 0.99,
+        opacity: 0,
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        ...reveal_defaults,
+        scrollTrigger: {
+          ...scroll_defaults,
+          trigger: $section[0],
+          start: $section.data('trigger-start') || scroll_defaults.start,
+        },
+      },
+    );
+  });
+
+  /* ====== Case ====== */
+  const $images = $('.tilt__img');
+
+  if ($images.length) {
+    const angle = 30,
+      distance = $images.first().height();
+
+    const x_offset = Math.sin((angle * Math.PI) / 180) * distance,
+      y_offset = Math.cos((angle * Math.PI) / 180) * distance;
+
+    const mm = gsap.matchMedia();
+
+    mm.add('(min-width: 992px)', () => {
+      gsap.from($images, {
+        x: -x_offset,
+        y: y_offset,
+        ...reveal_defaults,
+        scrollTrigger: {
+          trigger: '.tilt',
+          ...scroll_defaults,
+        },
+      });
+    });
+
+    mm.add('(max-width: 991px)', () => {
+      const $first_images = $images.slice(0, 2);
+      const $second_images = $images.slice(2, 4);
+
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.tilt',
+          ...scroll_defaults,
+        },
+      });
+
+      tl.from($first_images, {
+        x: (index, target) => {
+          const current_x = gsap.getProperty(target, 'x');
+          return current_x - x_offset * Math.pow(-1, index);
+        },
+        y: (index, target) => {
+          const current_y = gsap.getProperty(target, 'y');
+          return current_y + y_offset * Math.pow(-1, index);
+        },
+        ...reveal_defaults,
+        stagger: 0,
+      }).from($second_images, {
+        x: (index, target) => {
+          const current_x = gsap.getProperty(target, 'x');
+          return current_x + x_offset * Math.pow(-1, index);
+        },
+        y: (index, target) => {
+          const current_y = gsap.getProperty(target, 'y');
+          return current_y - y_offset * Math.pow(-1, index);
+        },
+        ...reveal_defaults,
+      }, '-=1');
+    });
+  }
 }
 
 function init_magnetic_buttons() {

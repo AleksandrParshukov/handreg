@@ -18,6 +18,7 @@
 .cases__img {
   padding: 5px;
   position: relative;
+  display: block;
 }
 .cases__img img {
   display: block;

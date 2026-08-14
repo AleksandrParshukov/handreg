@@ -322,11 +322,13 @@ function init_sliders() {
       },
     });
 
-    $cases_slider.on('click', '.swiper-slide-prev', function () {
+    $cases_slider.on('click', '.swiper-slide-prev', function (evt) {
+      evt.preventDefault();
       slider.slidePrev();
     });
 
-    $cases_slider.on('click', '.swiper-slide-next', function () {
+    $cases_slider.on('click', '.swiper-slide-next', function (evt) {
+      evt.preventDefault();
       slider.slideNext();
     });
   }

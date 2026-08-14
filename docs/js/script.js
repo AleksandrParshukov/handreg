@@ -322,11 +322,13 @@ function init_sliders() {
       },
     });
 
-    $cases_slider.on('click', '.swiper-slide-prev', function () {
+    $cases_slider.on('click', '.swiper-slide-prev', function (evt) {
+      evt.preventDefault();
       slider.slidePrev();
     });
 
-    $cases_slider.on('click', '.swiper-slide-next', function () {
+    $cases_slider.on('click', '.swiper-slide-next', function (evt) {
+      evt.preventDefault();
       slider.slideNext();
     });
   }
@@ -461,8 +463,8 @@ async function init_map() {
   map.addChild(
     new YMapDefaultMarker({
       coordinates: map_center,
-      title: 'Наш офис',
-      subtitle: 'Большой Сампсониевский проспект, 77/7',
+      title: 'Хэндрег',
+      subtitle: 'Веб-студия',
     }),
   );
 }
