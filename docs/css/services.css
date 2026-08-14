@@ -152,6 +152,12 @@ html.light-theme .card {
 html.light-theme .bright .card {
   background-color: #f7f7fb;
 }
+html.light-theme .benefits li {
+  color: var(--color-text);
+}
+html.light-theme .benefits li i {
+  color: var(--accent-primary);
+}
 
 @media (max-width: 991.5px) {
   .cards {

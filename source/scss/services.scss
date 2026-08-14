@@ -180,6 +180,17 @@ html.light-theme {
       background-color: #f7f7fb;
     }
   }
+
+  
+.benefits {
+  li {
+    color: var(--color-text);
+
+    i {
+      color: var(--accent-primary);
+    }
+  }
+}
 }
 
 @media (max-width: $ssm) {

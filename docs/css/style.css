@@ -1045,6 +1045,41 @@ html.light-theme .footer__link:hover {
 .contacts__map .ymaps3--map-container {
   border-radius: inherit;
 }
+.contacts__marker {
+  margin-top: -10px;
+  margin-left: -8px;
+  position: relative;
+  transform: translate(-50%, -100%);
+}
+.contacts__marker::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  rotate: 45deg;
+  background-color: #4800cf;
+  border-radius: 3px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.contacts__marker > div {
+  padding: 8px 16px;
+  background: linear-gradient(to top, #4800cf 0%, #7c5cff 100%);
+  border-radius: 8px;
+  display: grid;
+  place-content: center;
+  position: relative;
+  z-index: 1;
+}
+.contacts__marker svg {
+  color: #ffffff;
+  width: 120px;
+  height: 35px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
 
 html.light-theme .contacts__wrapper {
   border-bottom-color: transparent;
