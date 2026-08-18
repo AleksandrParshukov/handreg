@@ -56,7 +56,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Back: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Back; },\n/* harmony export */   Bounce: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Bounce; },\n/* harmony export */   CSSPlugin: function() { return /* reexport safe */ _CSSPlugin_js__WEBPACK_IMPORTED_MODULE_1__.CSSPlugin; },\n/* harmony export */   Circ: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Circ; },\n/* harmony export */   Cubic: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Cubic; },\n/* harmony export */   Elastic: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Elastic; },\n/* harmony export */   Expo: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Expo; },\n/* harmony export */   Linear: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Linear; },\n/* harmony export */   Power0: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Power0; },\n/* harmony export */   Power1: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Power1; },\n/* harmony export */   Power2: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Power2; },\n/* harmony export */   Power3: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Power3; },\n/* harmony export */   Power4: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Power4; },\n/* harmony export */   Quad: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Quad; },\n/* harmony export */   Quart: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Quart; },\n/* harmony export */   Quint: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Quint; },\n/* harmony export */   Sine: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Sine; },\n/* harmony export */   SteppedEase: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.SteppedEase; },\n/* harmony export */   Strong: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Strong; },\n/* harmony export */   TimelineLite: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.TimelineLite; },\n/* harmony export */   TimelineMax: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.TimelineMax; },\n/* harmony export */   TweenLite: function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.TweenLite; },\n/* harmony export */   TweenMax: function() { return /* binding */ TweenMaxWithCSS; },\n/* harmony export */   \"default\": function() { return /* binding */ gsapWithCSS; },\n/* harmony export */   gsap: function() { return /* binding */ gsapWithCSS; }\n/* harmony export */ });\n/* harmony import */ var _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gsap-core.js */ \"./node_modules/gsap/gsap-core.js\");\n/* harmony import */ var _CSSPlugin_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CSSPlugin.js */ \"./node_modules/gsap/CSSPlugin.js\");\n\n\nvar gsapWithCSS = _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(_CSSPlugin_js__WEBPACK_IMPORTED_MODULE_1__.CSSPlugin) || _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.gsap,\n    // to protect from tree shaking\nTweenMaxWithCSS = gsapWithCSS.core.Tween;\n\n\n//# sourceURL=webpack://Handreg/./node_modules/gsap/index.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   TweenMax: function() { return /* binding */ TweenMaxWithCSS; },\n/* harmony export */   \"default\": function() { return /* binding */ gsapWithCSS; },\n/* harmony export */   gsap: function() { return /* binding */ gsapWithCSS; }\n/* harmony export */ });\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* empty/unused harmony star reexport */\n/* harmony import */ var _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gsap-core.js */ \"./node_modules/gsap/gsap-core.js\");\n/* harmony import */ var _CSSPlugin_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CSSPlugin.js */ \"./node_modules/gsap/CSSPlugin.js\");\n\n\nvar gsapWithCSS = _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(_CSSPlugin_js__WEBPACK_IMPORTED_MODULE_2__.CSSPlugin) || _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.gsap,\n    // to protect from tree shaking\nTweenMaxWithCSS = gsapWithCSS.core.Tween;\n\n\n//# sourceURL=webpack://Handreg/./node_modules/gsap/index.js?\n}");
 
 /***/ }),
 
@@ -105,11 +105,26 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var gsa
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	!function() {
-/******/ 		// define getter functions for harmony exports
+/******/ 		// define getter/value functions for harmony exports
 /******/ 		__webpack_require__.d = function(exports, definition) {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			if(Array.isArray(definition)) {
+/******/ 				var i = 0;
+/******/ 				while(i < definition.length) {
+/******/ 					var key = definition[i++];
+/******/ 					var binding = definition[i++];
+/******/ 					if(!__webpack_require__.o(exports, key)) {
+/******/ 						if(binding === 0) {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, value: definition[i++] });
+/******/ 						} else {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, get: binding });
+/******/ 						}
+/******/ 					} else if(binding === 0) { i++; }
+/******/ 				}
+/******/ 			} else {
+/******/ 				for(var key in definition) {
+/******/ 					if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 						Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 					}
 /******/ 				}
 /******/ 			}
 /******/ 		};

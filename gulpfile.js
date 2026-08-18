@@ -1,20 +1,13 @@
 const gulp = require('gulp'),
   dartSass = require('sass'),
   sass = require('gulp-sass')(dartSass),
-  autoprefixer = require('gulp-autoprefixer'),
-  uglify = require('gulp-uglify'),
-  gulpif = require('gulp-if'),
-  cleancss = require('gulp-clean-css'),
-  sourcemap = require('gulp-sourcemaps'),
-  rename = require('gulp-rename'),
-  del = require('del'),
+  autoprefixer = require('gulp-autoprefixer').default,
+  { deleteAsync } = require('del'),
   sync = require('browser-sync').create(),
   fileinclude = require('gulp-file-include'),
   webpackStream = require('webpack-stream');
 
 // Styles
-const isDev = process.env.NODE_ENV === 'dev' ? true : false;
-
 function scss(done) {
   return gulp
     .src('source/scss/**/*.scss')
@@ -25,22 +18,6 @@ function scss(done) {
 }
 
 exports.scss = scss;
-
-/* const styles = () => {
-	return gulp
-		.src('source/less/style.less')
-		.pipe(plumber())
-		.pipe(sourcemap.init())
-		.pipe(less())
-		.pipe(gulp.dest('docs/css'))
-		.pipe(postcss([autoprefixer(), csso()]))
-		.pipe(rename('style.min.css'))
-		.pipe(sourcemap.write('.'))
-		.pipe(gulp.dest('docs/css'))
-		.pipe(sync.stream());
-};
-exports.styles = styles;
-*/
 
 // JS
 const js = () => {
@@ -78,8 +55,6 @@ exports.animations = animations;
 
 // HTML
 const html = () => {
-  // return gulp.src('source/*.html').pipe(gulp.dest('docs'));
-
   return gulp
     .src(['source/**/*.html', '!source/**/_*.html'], { base: 'source' })
     .pipe(
@@ -92,8 +67,8 @@ const html = () => {
 };
 
 // Copy
-const copy = (done) => {
-  gulp
+const copy = () => {
+  return gulp
     .src(
       [
         'source/fonts/*.{ttf,woff2,woff,otf}',
@@ -106,17 +81,17 @@ const copy = (done) => {
       ],
       {
         base: 'source',
+        encoding: false,
       },
     )
     .pipe(gulp.dest('docs'));
-  done();
 };
 
 exports.copy = copy;
 
 // Clean
 const clean = () => {
-  return del('docs');
+  return deleteAsync('docs');
 };
 
 // Server
