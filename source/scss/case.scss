@@ -93,6 +93,40 @@
         left: 100%;
       }
     }
+
+    &.vertical {
+      li {
+        position: absolute;
+        top: 50%;
+        width: 0;
+        height: 0;
+
+        &:nth-child(1) {
+          left: 0;
+
+          .tilt__img {
+            width: clamp(400px, 85vw, 1000px);
+            transform: translate(0, -10%);
+          }
+        }
+
+        &:nth-child(2) {
+          left: auto;
+          right: 0;
+
+          .tilt__img {
+            transform: translate(-100%, -17%);
+          }
+        }
+      }
+
+      .tilt__img {
+        width: clamp(500px, 85vw, 1200px);
+        height: auto;
+        border-radius: 24px;
+        border: 1px solid rgb(200 200 200 / 0.5);
+      }
+    }
   }
 
   &__img {
